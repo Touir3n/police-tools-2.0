@@ -21,7 +21,6 @@
         label { font-weight: bold; font-size: 12px; color: #333; margin-bottom: 3px; }
         input[type="text"], input[type="password"], select { padding: 8px; border: 1px solid #ccc; border-radius: 4px; font-size: 13px; box-sizing: border-box; width: 100%; transition: border 0.3s, background-color 0.3s;}
         
-        /* ΝΕΟ: Κλάση Επικύρωσης (Validation) */
         .input-error { border: 2px solid #dc3545 !important; background-color: #ffe6e6 !important; }
         
         .manual-input { border-left: 3px solid #f0ad4e; background-color: #fffaf0; } 
@@ -55,8 +54,9 @@
         .flex-row { display: flex; gap: 10px; margin-top: 10px; }
         .info-text { font-size: 12px; color: #555; margin-bottom: 10px; line-height: 1.4; background: #eef; padding: 10px; border-radius: 4px;}
         
-        .gdpr-warning { background-color: #ffebee; border-left: 5px solid #d32f2f; padding: 12px; margin-top: 10px; margin-bottom: 10px; border-radius: 4px; font-size: 13px; color: #333; }
-        .gdpr-warning strong { color: #d32f2f; font-size: 14px;}
+        /* ΝΕΟ: Πιο διακριτικό και "μαλακό" πλαίσιο GDPR */
+        .gdpr-warning { background-color: #f8f9fa; border: 1px solid #ced4da; border-left: 4px solid #6c757d; padding: 12px; margin-top: 10px; margin-bottom: 10px; border-radius: 4px; font-size: 12px; color: #555; display: flex; align-items: center; gap: 10px;}
+        .gdpr-warning strong { color: #495057; font-size: 13px;}
 
         .tabs { display: flex; border-bottom: 3px solid #003366; margin-top: 15px; gap: 5px; flex-wrap: wrap; }
         .tab-btn { background: #d9e2ec; color: #333; border: 1px solid #b3cce6; border-bottom: none; padding: 10px 16px; border-radius: 6px 6px 0 0; cursor: pointer; font-size: 13px; font-weight: bold; transition: all 0.3s ease; box-shadow: 0 -2px 4px rgba(0,0,0,0.05);}
@@ -98,7 +98,7 @@
     
     <div class="header-box">
         <h1>⚙️ Προανακριτικη Μηχανη AI</h1>
-        <p>💻 PC Edition (Ολοκληρωμένο Σύστημα Δικογραφιών V 2.1)</p>
+        <p>💻 PC Edition (Ολοκληρωμένο Σύστημα Δικογραφιών V 2.2)</p>
     </div>
 
     <div class="ai-settings">
@@ -262,7 +262,10 @@
             </div>
             
             <div class="gdpr-warning">
-                <strong>🚨 ΑΥΣΤΗΡΟΣ ΚΑΝΟΝΑΣ (GDPR):</strong> Πριν πατήσετε τα κουμπιά της Τεχνητής Νοημοσύνης (AI), <b>ΑΠΑΓΟΡΕΥΕΤΑΙ να γράψετε πραγματικά ονοματεπώνυμα. Χρησιμοποιήστε ΜΟΝΟ ΑΡΧΙΚΑ</b> (π.χ. "Ο Γ.Π.").
+                <span style="font-size: 18px;">🛡️</span>
+                <div>
+                    <strong>Προστασία Δεδομένων (GDPR):</strong> Συστήνεται να αποφεύγεται η χρήση πραγματικών ονομάτων στα μεγάλα πλαίσια κειμένου αν σκοπεύετε να χρησιμοποιήσετε την Τεχνητή Νοημοσύνη (AI). Προτιμήστε τη χρήση αρχικών (π.χ. αντί για "Γεωργίου Πέτρος", γράψτε "Γ.Π."). Τα νούμερα, τα ΑΔΤ και τα τηλέφωνα αποκρύπτονται αυτόματα.
+                </div>
             </div>
 
             <div style="margin-top: 10px;">
@@ -347,15 +350,15 @@
                     </div>
                     <div class="form-group">
                         <label>Χορήγηση Προθεσμίας έως (Ημερομηνία):</label>
-                        <input type="text" id="prok_dead_date" placeholder="π.χ. 12-05-2026">
+                        <input type="text" id="prok_dead_date" placeholder="π.χ. 12-05-2026" oninput="saveMem(this.id)">
                     </div>
                     <div class="form-group">
                         <label>Χορήγηση Προθεσμίας έως (Ώρα):</label>
-                        <input type="text" id="prok_dead_time" placeholder="π.χ. 10:00">
+                        <input type="text" id="prok_dead_time" placeholder="π.χ. 10:00" oninput="saveMem(this.id)">
                     </div>
                     <div class="form-group" style="grid-column: span 2;">
                         <label>Αριθμός Σελίδων Υπομνήματος (σε περίπτωση εγχείρισης):</label>
-                        <input type="text" id="prok_pages" placeholder="π.χ. τρεις (3)">
+                        <input type="text" id="prok_pages" placeholder="π.χ. τρεις (3)" oninput="saveMem(this.id)">
                     </div>
                 </div>
                 
@@ -382,7 +385,10 @@
                     Περιγράψτε με απλά λόγια τι συνέβη. Η AI θα γράψει αυτόματα το "Βασικό Κατηγορητήριο" και τα "Πραγματικά Περιστατικά" σε νομική γλώσσα.
                 </p>
                 <div class="gdpr-warning" style="margin-top: 5px; margin-bottom: 10px;">
-                    <strong>🚨 ΑΠΑΓΟΡΕΥΕΤΑΙ</strong> η χρήση πραγματικών ονομάτων (GDPR). Γράψτε <b>μόνο με αρχικά</b> (π.χ. "ο Κ.Μ. μπήκε στο σπίτι").
+                    <span style="font-size: 18px;">🛡️</span>
+                    <div>
+                        <strong>Προστασία Δεδομένων:</strong> Αποφύγετε τη χρήση πραγματικών ονομάτων αν χρησιμοποιήσετε την AI. Γράψτε μόνο με αρχικά (π.χ. "ο Κ.Μ. μπήκε στο σπίτι").
+                    </div>
                 </div>
                 <div style="display: flex; gap: 10px;">
                     <textarea id="ai_rough_notes" style="flex: 2; height: 50px; border: 2px dashed #8e44ad; padding: 8px;" placeholder="π.χ. Σήμερα το πρωί ο Α.Β. μπήκε στο περίπτερο του Γ.Δ. και..." oninput="saveMem(this.id)"></textarea>
@@ -478,9 +484,9 @@
                 <div class="arrest-grid">
                     <div class="form-group"><label>Ημερ. Σύλληψης (Στο δρόμο):</label><input type="text" id="arr_street_date"></div>
                     <div class="form-group"><label>Ώρα Σύλληψης (Στο δρόμο):</label><input type="text" id="arr_street_time"></div>
-                    <div class="form-group" style="grid-column: span 2;"><label>Ακριβές Σημείο Σύλληψης: *</label><input type="text" id="arr_loc" placeholder="π.χ. επί της Εγνατίας Οδού"></div>
-                    <div class="form-group" style="grid-column: span 2;"><label>Συλλαβών Αστυνομικός (σε Αιτιατική):</label><input type="text" id="arr_officer" placeholder="π.χ. Αστυφύλακα ΓΕΩΡΓΙΟΥ Γεώργιο της Ο.Π.Κ.Ε."></div>
-                    <div class="form-group" style="grid-column: span 2;"><label>Πρόσθετη Αιτιολογία (προαιρετικό):</label><input type="text" id="arr_reason" placeholder="π.χ. κατελήφθη σε γενόμενο αστυνομικό έλεγχο να έχει..."></div>
+                    <div class="form-group" style="grid-column: span 2;"><label>Ακριβές Σημείο Σύλληψης: *</label><input type="text" id="arr_loc" placeholder="π.χ. επί της Εγνατίας Οδού" oninput="saveMem(this.id)"></div>
+                    <div class="form-group" style="grid-column: span 2;"><label>Συλλαβών Αστυνομικός (σε Αιτιατική):</label><input type="text" id="arr_officer" placeholder="π.χ. Αστυφύλακα ΓΕΩΡΓΙΟΥ Γεώργιο της Ο.Π.Κ.Ε." oninput="saveMem(this.id)"></div>
+                    <div class="form-group" style="grid-column: span 2;"><label>Πρόσθετη Αιτιολογία (προαιρετικό):</label><input type="text" id="arr_reason" placeholder="π.χ. κατελήφθη σε γενόμενο αστυνομικό έλεγχο να έχει..." oninput="saveMem(this.id)"></div>
                 </div>
                 <button class="btn-word-arrest" onclick="exportArrest()">🚨 1. Λήψη Έκθεσης Σύλληψης (.doc)</button>
             </div>
@@ -515,9 +521,9 @@
                         <option value="ΕΡΕΥΝΑΣ ΟΙΚΙΑΣ ΚΑΙ ΚΑΤΑΣΧΕΣΗΣ">Έρευνα Οικίας και Κατάσχεση</option>
                     </select>
                 </div>
-                <div class="form-group"><label>Είδος Ναρκωτικής Ουσίας (σε αιτιατική): *</label><input type="text" id="drug_type" placeholder="π.χ. Ακατέργαστη Κάνναβη, Ηρωίνη"></div>
-                <div class="form-group"><label>Μικτό Βάρος (σε αριθμό): *</label><input type="text" id="drug_weight" placeholder="π.χ. 2,5"></div>
-                <div class="form-group" style="grid-column: span 2;"><label>Συσκευασία / Περιγραφή Αντικειμένου: *</label><input type="text" id="drug_packaging" placeholder="π.χ. μία (1) αυτοσχέδια νάιλον συσκευασία"></div>
+                <div class="form-group"><label>Είδος Ναρκωτικής Ουσίας (σε αιτιατική): *</label><input type="text" id="drug_type" placeholder="π.χ. Ακατέργαστη Κάνναβη, Ηρωίνη" oninput="saveMem(this.id)"></div>
+                <div class="form-group"><label>Μικτό Βάρος (σε αριθμό): *</label><input type="text" id="drug_weight" placeholder="π.χ. 2,5" oninput="saveMem(this.id)"></div>
+                <div class="form-group" style="grid-column: span 2;"><label>Συσκευασία / Περιγραφή Αντικειμένου: *</label><input type="text" id="drug_packaging" placeholder="π.χ. μία (1) αυτοσχέδια νάιλον συσκευασία" oninput="saveMem(this.id)"></div>
             </div>
 
             <div style="display: flex; gap: 15px;">
@@ -541,7 +547,6 @@
             if (el && el.value.trim() === "") {
                 el.classList.add("input-error");
                 isValid = false;
-                // Αφαιρεί το κόκκινο μόλις ο χρήστης ξεκινήσει να γράφει
                 el.addEventListener('input', function() {
                     this.classList.remove("input-error");
                 }, {once: true});
@@ -611,7 +616,7 @@
             let inputs = document.querySelectorAll('.grid-form input:not([id^="doc_"]), .tab-content textarea, .ai-grid input, .arrest-grid input, #ai_law, #apologia_rights, #apologia_past');
             inputs.forEach(input => {
                 input.value = "";
-                input.classList.remove("input-error"); // Καθαρισμός κόκκινων πεδίων
+                input.classList.remove("input-error");
             });
             document.getElementById("apologia_rights").value = "Όχι.";
             document.getElementById("apologia_past").value = "Όχι, δεν έχω κατηγορηθεί ξανά.";
@@ -665,7 +670,6 @@
         document.getElementById("auth").value = toTitleCaseWords(authFull);
         if (phoneMatch) document.getElementById("phone").value = phoneMatch[1];
         
-        // Αφαιρούμε τα κόκκινα περιγράμματα αν υπήρχαν
         document.querySelectorAll('.input-error').forEach(el => el.classList.remove('input-error'));
     }
 
@@ -698,7 +702,7 @@
         sanitized = sanitized.replace(/\b[26]\d{9}\b/g, "[ΤΗΛΕΦΩΝΟ]");
         sanitized = sanitized.replace(/\b\d{9}\b/g, "[ΑΦΜ]");
         sanitized = sanitized.replace(/\b[Α-Ω]{1,3}\s*\d{5,8}\b/g, "[ΑΔΤ]");
-        sanitized = sanitized.replace(/\b[Α-ΩA-Z]{3}-\d{4}\b/g, "[ΠΙΝΑΚΙΔΑ]"); // Φίλτρο Πινακίδων
+        sanitized = sanitized.replace(/\b[Α-ΩA-Z]{3}-\d{4}\b/g, "[ΠΙΝΑΚΙΔΑ]");
         sanitized = sanitized.replace(/\b\d{5,}\b/g, "[ΑΡΙΘΜΟΣ]");
         return sanitized;
     }
@@ -830,7 +834,7 @@
     // ==========================================
     // ΛΟΓΙΚΗ ΕΞΑΓΩΓΗΣ ΣΕ WORD (ΟΛΑ ΤΑ ΕΓΓΡΑΦΑ)
     // ==========================================
-    const pStyle = "text-align: justify; font-family: 'Times New Roman'; font-size: 12pt; line-height: 115%; margin: 0cm; padding: 0cm;";
+    const pStyle = "text-align: justify; font-family: 'Times New Roman'; font-size: 12pt; line-height: 115%; margin: 0cm; padding: 0cm; background: white; color: black;";
 
     function formatTextToParagraphs(text) {
         let lines = text.split(/\n/); let html = "";
@@ -862,14 +866,15 @@
     }
 
     function makeDoc(title, headerTitle, bodyContent, filename) {
-        let finalHtml = `<p style="text-align: center; font-weight: bold; text-decoration: underline; font-family: 'Times New Roman'; font-size: 14pt; line-height: 115%; margin: 0cm 0cm 6pt 0cm;">${headerTitle}</p>${bodyContent}`;
-        let blob = new Blob(['\ufeff', `<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>${title}</title></head><body>${finalHtml}</body></html>`], { type: 'application/msword' });
+        let finalHtml = `<p style="text-align: center; font-weight: bold; text-decoration: underline; font-family: 'Times New Roman'; font-size: 14pt; line-height: 115%; margin: 0cm 0cm 6pt 0cm; background: white; color: black;">${headerTitle}</p>${bodyContent}`;
+        let fullHtml = `<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>${title}</title><style>body { background: white; color: black; font-family: 'Times New Roman'; }</style></head><body style="background-color: white; color: black;">${finalHtml}</body></html>`;
+        let blob = new Blob(['\ufeff', fullHtml], { type: 'application/msword' });
         let url = URL.createObjectURL(blob); let link = document.createElement('a'); link.href = url; link.download = filename; 
         document.body.appendChild(link); link.click(); document.body.removeChild(link);
     }
 
     function sigBlock(role1, role2, role3) {
-        return `<p style="${pStyle}">&nbsp;</p><table style="width: 100%; font-family: 'Times New Roman'; font-size: 12pt; text-align: center; margin-top: 0cm; margin-bottom: 0cm; padding: 0cm;" border="0"><tr><td style="width: 33%;">${role1}</td><td style="width: 33%;">${role2}</td><td style="width: 33%;">${role3}</td></tr></table>`;
+        return `<p style="${pStyle}">&nbsp;</p><table style="width: 100%; font-family: 'Times New Roman'; font-size: 12pt; text-align: center; margin-top: 0cm; margin-bottom: 0cm; padding: 0cm; background: white; color: black;" border="0"><tr><td style="width: 33%;">${role1}</td><td style="width: 33%;">${role2}</td><td style="width: 33%;">${role3}</td></tr></table>`;
     }
 
     function getD() {
@@ -888,7 +893,7 @@
 
     // 1. ΑΠΛΗ ΕΝΟΡΚΗ
     function exportToWord() {
-        if (!validateRequiredFields(['surname', 'name'])) return;
+        if (!validateRequiredFields(['surname', 'name', 'doc_testimony_simple'])) return;
         
         let d = getD(); let rel = d.v("doc_relation_simple"); let copy = d.v("doc_copy_simple"); let parav = d.v("doc_paravolo_simple");
         let body = `<p style="${pStyle}">Στην Ασπροβάλτα, σήμερα την ${d.dateStr} και ώρα ${d.v("doc_start")} ενώπιον εµού του ${d.anakr} του Α.T. Βόλβης, παρισταμένου και του ${d.banakr} της ίδιας υπηρεσίας, που προσλήφθηκε ως Β' Ανακριτικός Υπάλληλος, εμφανίσθηκε ${d.a_o} κατωτέρω μάρτυρας, ${d.a_os}, αφού ερωτήθηκε για την ταυτότητά ${d.a_tou} κλπ., απάντησε ότι ονομάζεται ${d.prof} και ότι ${rel}.</p>
@@ -910,7 +915,7 @@
 
     // 2. ΕΝΔΟΟΙΚΟΓΕΝΕΙΑΚΗ
     function exportToWordNoOath() {
-        if (!validateRequiredFields(['surname', 'name'])) return;
+        if (!validateRequiredFields(['surname', 'name', 'dv_q_main'])) return;
         
         let d = getD(); let rel = d.v("doc_relation_dv"); let copy = d.v("doc_copy_dv"); let parav = d.v("doc_paravolo_dv");
         let body = `<p style="${pStyle}">Στην Ασπροβάλτα, σήμερα την ${d.dateStr} και ώρα ${d.v("doc_start")} ενώπιον εμού του ${d.anakr} του Α.T. Βόλβης, παρισταμένου και του ${d.banakr} της ίδιας υπηρεσίας, που προσλήφθηκε ως Β' Ανακριτικός Υπάλληλος, εμφανίσθηκε ${d.a_o} κατωτέρω μάρτυρας, ${d.a_os}, αφού ερωτήθηκε για την ταυτότητά ${d.a_tou} κλπ., απάντησε ότι ονομάζεται ${d.prof} και ότι ${rel}.</p>
@@ -968,7 +973,7 @@
 
     // 5. ΠΡΟΚΑΤΑΡΚΤΙΚΗ - ΧΟΡΗΓΗΣΗ ΠΡΟΘΕΣΜΙΑΣ
     function exportProkDeadline() {
-        if (!validateRequiredFields(['surname', 'name', 'prok_abm'])) return;
+        if (!validateRequiredFields(['surname', 'name', 'prok_abm', 'prok_dead_date', 'prok_dead_time'])) return;
         
         let d = getD(); let abm = d.v("prok_abm");
         let body = `<p style="${pStyle}">Στην Ασπροβάλτα, σήμερα την ${d.dateStr} και ώρα ${d.v("doc_start")} ενώπιον εµού του ${d.anakr} του Α.T. Βόλβης, παρισταμένου και του ${d.banakr} της ίδιας υπηρεσίας, που προσλήφθηκε ως Β' Ανακριτικός Υπάλληλος, εμφανίσθηκε ${d.a_o} κατωτέρω ύποπτος, ${d.a_os}, αφού ερωτήθηκε για την ταυτότητά ${d.a_tou} κλπ., απάντησε ότι ονομάζεται ${d.prof}.</p>
@@ -982,7 +987,7 @@
 
     // 6. ΠΡΟΚΑΤΑΡΚΤΙΚΗ - ΜΕΤΑ ΑΠΟ ΠΡΟΘΕΣΜΙΑ
     function exportProkAfterDeadline() {
-        if (!validateRequiredFields(['surname', 'name', 'prok_abm', 'prok_plea'])) return;
+        if (!validateRequiredFields(['surname', 'name', 'prok_abm', 'prok_dead_date', 'prok_plea'])) return;
         
         let d = getD(); let abm = d.v("prok_abm");
         let body = `<p style="${pStyle}">Στην Ασπροβάλτα, σήμερα την ${d.dateStr} και ώρα ${d.v("doc_start")} ενώπιον εµού του ${d.anakr} του Α.T. Βόλβης, παρισταμένου και του ${d.banakr} της ίδιας υπηρεσίας, που προσλήφθηκε ως Β' Ανακριτικός Υπάλληλος, εμφανίσθηκε ${d.a_o} κατωτέρω ύποπτος, ${d.a_os}, αφού ερωτήθηκε για την ταυτότητά ${d.a_tou} κλπ., απάντησε ότι ονομάζεται ${d.prof}.</p>
@@ -997,7 +1002,7 @@
 
     // 7. ΠΡΟΚΑΤΑΡΚΤΙΚΗ - ΥΠΟΜΝΗΜΑ
     function exportProkMemo() {
-        if (!validateRequiredFields(['surname', 'name', 'prok_abm'])) return;
+        if (!validateRequiredFields(['surname', 'name', 'prok_abm', 'prok_pages'])) return;
         
         let d = getD(); let abm = d.v("prok_abm");
         let body = `<p style="${pStyle}">Στην Ασπροβάλτα, σήμερα την ${d.dateStr} και ώρα ${d.v("doc_start")} ενώπιον εµού του ${d.anakr} του Α.T. Βόλβης, παρισταμένου και του ${d.banakr} της ίδιας υπηρεσίας, που προσλήφθηκε ως Β' Ανακριτικός Υπάλληλος, εμφανίσθηκε ${d.a_o} κατωτέρω ύποπτος, ${d.a_os}, αφού ερωτήθηκε για την ταυτότητά ${d.a_tou} κλπ., απάντησε ότι ονομάζεται ${d.prof}.</p>
@@ -1010,7 +1015,7 @@
 
     // 8. ΣΥΛΛΗΨΗ
     function exportArrest() {
-        if (!validateRequiredFields(['surname', 'name', 'arr_loc'])) return;
+        if (!validateRequiredFields(['surname', 'name', 'arr_loc', 'apologia_charge_short'])) return;
         
         let d = getD(); let shortC = d.v("apologia_charge_short"); let reason = d.v("arr_reason").replace(/[\n\r]+/g, " ");
         let sentence = reason !== "" ? `διότι ${reason} για ${shortC}` : (shortC !== "" ? `για ${shortC}` : `για ... (Συμπληρώστε αιτιολογία)`);
@@ -1021,7 +1026,7 @@
         <p style="${pStyle}">Αφού ενημέρωσα ${d.a_auton} για τα προβλεπόμενα στο άρθρο 95 του Κ.Π.Δ. δικαιώματά του, παρείχα το προβλεπόμενο στο άρθρο 96 του ΚΠΔ έγγραφο σε κατάλληλη γλώσσα, εξέτασα ${d.a_auton} και πείσθηκα ότι ουδεμία υπάρχει ως προς την ταυτότητά ${d.a_tou} αμφιβολία, διέταξα την προσαγωγή και παραπομπή ${d.a_tou}, στον κ. Εισαγγελέα Πλημμελειοδικών Θεσσαλονίκης και την παράδοσή ${d.a_tou} με την παρούσα έκθεση.</p>
         <p style="${pStyle}">Η παρούσα άρχισε να συντάσσεται την ${d.v("arr_start")} ώρα και περατώθηκε την ${d.v("arr_end")} ώρα.</p>
         <p style="${pStyle}">Για πίστωση συντάχθηκε η παρούσα έκθεση, η οποία αφού αναγνώσθηκε και βεβαιώθηκε, υπογράφεται ως ακολούθως :</p>
-        <table style="width: 100%; font-family: 'Times New Roman'; font-size: 12pt; text-align: center; margin-top: 0cm; margin-bottom: 0cm; padding: 0cm;" border="0"><tr><td style="width: 25%;">${d.v("gender")==='M'?"Ο Συλληφθείς":"Η Συλληφθείσα"}</td><td style="width: 25%;">Ο Συλλαβών</td><td style="width: 25%;">Ο Β΄ Ανακριτ. Υπάλλ.</td><td style="width: 25%;">Ο Ανακριτ. Υπάλληλος</td></tr></table>`;
+        <table style="width: 100%; font-family: 'Times New Roman'; font-size: 12pt; text-align: center; margin-top: 0cm; margin-bottom: 0cm; padding: 0cm; background: white; color: black;" border="0"><tr><td style="width: 25%;">${d.v("gender")==='M'?"Ο Συλληφθείς":"Η Συλληφθείσα"}</td><td style="width: 25%;">Ο Συλλαβών</td><td style="width: 25%;">Ο Β΄ Ανακριτ. Υπάλλ.</td><td style="width: 25%;">Ο Ανακριτ. Υπάλληλος</td></tr></table>`;
         makeDoc("Σύλληψη", "Ε Κ Θ Ε Σ Η &nbsp;&nbsp;&nbsp; Σ Υ Λ Λ Η Ψ Η Σ", body, `1_ΕΚΘΕΣΗ_ΣΥΛΛΗΨΗΣ_${d.v("surname")}.doc`);
     }
 
@@ -1029,7 +1034,7 @@
     function exportRights() {
         if (!validateRequiredFields(['surname', 'name', 'apologia_charge_short'])) return;
         
-        let d = getD(); let rp = "text-align: justify; font-family: 'Times New Roman'; font-size: 11pt; line-height: 115%; margin: 0cm; padding: 0cm;";
+        let d = getD(); let rp = "text-align: justify; font-family: 'Times New Roman'; font-size: 11pt; line-height: 115%; margin: 0cm; padding: 0cm; background: white; color: black;";
         let body = `<p style="${rp}">Στην Ασπροβάλτα σήμερα την ${d.dateStr} και ώρα ${d.v("rig_start")}΄, ενώπιον εμού του ${d.anakr} υπηρετούντος στο Αστυνομικό Τμήμα Βόλβης Θεσσαλονίκης, παρισταμένου και του ${d.banakr} της ιδίας Υπηρεσίας προσληφθείς ως Β’ Ανακριτικού Υπαλλήλου, προσκλήθηκε ο κατωτέρω σημειούμενος κατηγορούμενος, που ονομάζεται ${d.prof}, τον οποίο ενημερώσαμε ότι κατηγορείται για ${d.v("apologia_charge_short")} και εξηγήσαμε σαφώς σ’ ${d.a_auton}, βάσει του άρθρου 105 του Κ.Π. Δικονομίας όλα τα εκ των άρθρων 91, 95, 96, 97, 98, 100, 101, 103 και 104, 273 & 274 του Κ.Π.Δ. δικαιώματά ${d.a_tou} και αναλυτικότερα:</p>
         <p style="${rp}">&nbsp;</p><p style="${rp}"><b>Α. Εκ του άρθρου 99 του Κ.Π.Δ., ήτοι παράσταση του κατηγορουμένου με συνήγορο:</b></p>
         <p style="${rp}">Ο Κατηγορούμενος έχει το δικαίωμα... (άρθρο 99 ΚΠΔ).</p><p style="${rp}">&nbsp;</p>
