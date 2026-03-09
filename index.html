@@ -95,7 +95,7 @@
     
     <div class="header-box">
         <h1>⚙️ Προανακριτικη Μηχανη AI</h1>
-        <p>💻 PC Edition (Powered by Gemini AI)</p>
+        <p>💻 PC Edition (Ολοκληρωμένο Σύστημα Δικογραφιών V 2.0)</p>
     </div>
 
     <div class="ai-settings">
@@ -153,7 +153,6 @@
             <div class="form-group"><label>Τηλέφωνο</label><input type="text" id="phone" class="manual-input"></div>
             <div class="form-group"><label>Email</label><input type="text" id="email" class="manual-input"></div>
         </div>
-        
         <button class="btn-copy" onclick="copyProfileText()">📋 Αντιγραφή Στοιχείων Προσώπου (Για επικόλληση αλλού)</button>
     </div>
 
@@ -211,7 +210,7 @@
                 </select>
             </div>
         </div>
-        
+
         <div class="tabs">
             <div class="tab-btn active" onclick="switchTab('simple', this)">📝 Απλή Ένορκη</div>
             <div class="tab-btn" onclick="switchTab('dv', this)">⚠️ Ενδοοικ. Μάρτυρας</div>
@@ -325,7 +324,7 @@
             </div>
 
             <div class="info-text" style="background-color: #e8f4f8; border-left: 4px solid #17a2b8;">
-                <strong>💡 ΣΗΜΕΙΩΣΗ:</strong> Όσα ερωτήματα αφήσετε <u>κενά</u>, θα αγνοηθούν αυτόματα.
+                <strong>💡 ΣΗΜΕΙΩΣΗ:</strong> Όσα ερωτήματα αφήσετε <u>κενά</u>, θα αγνοηθούν αυτόματα και <strong>ΔΕΝ</strong> θα μπουν στο τελικό Word.
             </div>
             <div id="dv_mode_container"></div>
             <button class="btn-word-no-oath" onclick="exportToWordNoOath()">⚠️ Λήψη Έκθεσης σε Word (.doc) - ΧΩΡΙΣ ΟΡΚΟ</button>
@@ -376,10 +375,10 @@
             <div class="ai-box">
                 <span style="font-size: 14px; color: #8e44ad; font-weight: bold;">🤖 AI Βοηθός Κατηγορητηρίου:</span>
                 <p style="font-size: 12px; color: #555; margin-bottom: 5px; margin-top: 5px;">
-                    Περιγράψτε με απλά λόγια τι συνέβη. Η AI θα γράψει αυτόματα το "Βασικό Κατηγορητήριο" και τα "Πραγματικά Περιστατικά" σε νομική γλώσσα.
+                    Περιγράψτε με απλά λόγια τι συνέβη. Η AI θα γράψει αυτόματα το "Βασικό Κατηγορητήριο" και τα "Πραγματικά Περιστατικά".
                 </p>
                 <div class="gdpr-warning" style="margin-top: 5px; margin-bottom: 10px;">
-                    <strong>🚨 ΑΠΑΓΟΡΕΥΕΤΑΙ</strong> η χρήση πραγματικών ονομάτων ή στοιχείων (GDPR). Γράψτε <b>μόνο με αρχικά</b> (π.χ. "ο Κ.Μ. μπήκε στο σπίτι").
+                    <strong>🚨 ΑΠΑΓΟΡΕΥΕΤΑΙ</strong> η χρήση πραγματικών ονομάτων (GDPR). Γράψτε <b>μόνο με αρχικά</b>.
                 </div>
                 <div style="display: flex; gap: 10px;">
                     <textarea id="ai_rough_notes" style="flex: 2; height: 50px; border: 2px dashed #8e44ad; padding: 8px;" placeholder="π.χ. Σήμερα το πρωί ο Α.Β. μπήκε στο περίπτερο..." oninput="saveMem(this.id)"></textarea>
@@ -444,7 +443,7 @@
 
             <div class="form-group" style="margin-bottom: 12px;">
                 <label style="color:#0056b3; font-size: 13px;">Βασικό Κατηγορητήριο (Μπαίνει Σύλληψη, Δικαιώματα & Απολογία)</label>
-                <textarea id="apologia_charge_short" style="height: 50px; border: 2px solid #b3cce6;" placeholder="π.χ. παράβαση των άρθρων... πράξεις που έλαβαν χώρα..." oninput="saveMem(this.id)"></textarea>
+                <textarea id="apologia_charge_short" style="height: 50px; border: 2px solid #b3cce6;" placeholder="π.χ. παράβαση των άρθρων..." oninput="saveMem(this.id)"></textarea>
             </div>
             
             <div class="form-group" style="margin-bottom: 20px;">
@@ -477,7 +476,7 @@
                     <div class="form-group"><label>Ώρα Σύλληψης (Στο δρόμο):</label><input type="text" id="arr_street_time"></div>
                     <div class="form-group" style="grid-column: span 2;"><label>Ακριβές Σημείο Σύλληψης:</label><input type="text" id="arr_loc" placeholder="π.χ. επί της Εγνατίας Οδού"></div>
                     <div class="form-group" style="grid-column: span 2;"><label>Συλλαβών Αστυνομικός (σε Αιτιατική):</label><input type="text" id="arr_officer" placeholder="π.χ. Αστυφύλακα ΓΕΩΡΓΙΟΥ Γεώργιο της Ο.Π.Κ.Ε."></div>
-                    <div class="form-group" style="grid-column: span 2;"><label>Πρόσθετη Αιτιολογία (προαιρετικό - μπαίνει πριν το κατηγορητήριο):</label><input type="text" id="arr_reason" placeholder="π.χ. κατελήφθη σε γενόμενο αστυνομικό έλεγχο να έχει..."></div>
+                    <div class="form-group" style="grid-column: span 2;"><label>Πρόσθετη Αιτιολογία (προαιρετικό):</label><input type="text" id="arr_reason" placeholder="π.χ. κατελήφθη σε γενόμενο αστυνομικό έλεγχο να έχει..."></div>
                 </div>
                 <button class="btn-word-arrest" onclick="exportArrest()">🚨 1. Λήψη Έκθεσης Σύλληψης (.doc)</button>
             </div>
@@ -495,7 +494,6 @@
                 <div class="form-group" style="margin-bottom:15px;"><label>ΕΡΩΤΗΣΗ: Κατηγορείσαι ήδη για τις πράξεις που σου γνωστοποιήθηκαν ανωτέρω. Τι απολογείσαι;</label><textarea id="apologia_plea" style="height: 100px;" placeholder="Τα αρνούμαι όλα..." oninput="saveMem(this.id)"></textarea></div>
                 <button class="btn-word-apologia" onclick="exportApologia()">⚖️ 3. Λήψη Απολογίας (.doc)</button>
             </div>
-
         </div>
 
         <div id="tab_drugs" class="tab-content" style="background-color: #f4f8fb;">
@@ -529,7 +527,9 @@
 </div>
 
 <script>
-    // --- AUTO-SAVE / MEMORY LOGIC ---
+    // ==========================================
+    // ΛΟΓΙΚΗ ΑΟΡΑΤΗΣ ΜΝΗΜΗΣ (AUTO-SAVE)
+    // ==========================================
     function saveMem(id) {
         let val = document.getElementById(id).value;
         localStorage.setItem('mem_' + id, val);
@@ -545,14 +545,16 @@
     function clearMem() {
         const keys = Object.keys(localStorage);
         keys.forEach(k => {
-            // Δεν σβήνουμε τα API keys ή τα επιλεγμένα ονόματα υπαλλήλων (doc_anakr, doc_banakr)
+            // Δεν διαγράφουμε ποτέ τα API keys και τα ονόματα των υπαλλήλων!
             if (k.startsWith('mem_') && k !== 'mem_doc_anakr' && k !== 'mem_doc_banakr') {
                 localStorage.removeItem(k);
             }
         });
     }
 
-    // --- TIME REFRESH LOGIC ---
+    // ==========================================
+    // ΒΑΣΙΚΕΣ ΛΕΙΤΟΥΡΓΙΕΣ ΦΟΡΜΑΣ
+    // ==========================================
     function refreshTimes() {
         const addMins = (date, mins) => new Date(date.getTime() + mins * 60000);
         const timeStr = (date) => String(date.getHours()).padStart(2, '0') + ':' + String(date.getMinutes()).padStart(2, '0');
@@ -570,317 +572,6 @@
         document.getElementById('arr_street_time').value = timeStr(now);
     }
 
-    // --- COPY PROFILE LOGIC ---
-    function copyProfileText() {
-        let text = getProfileText();
-        if(!text || text.trim().length < 10) {
-            alert("Δεν υπάρχουν επαρκή στοιχεία για αντιγραφή.");
-            return;
-        }
-        navigator.clipboard.writeText(text).then(() => {
-            alert("Τα στοιχεία αντιγράφηκαν επιτυχώς στο πρόχειρο!");
-        }).catch(err => {
-            alert("Σφάλμα κατά την αντιγραφή: " + err);
-        });
-    }
-
-    // --- AI SANITIZATION (GDPR PROTECTION) ---
-    function sanitizeForAI(text) {
-        if(!text) return "";
-        let sanitized = text;
-        sanitized = sanitized.replace(/\b[26]\d{9}\b/g, "[ΤΗΛΕΦΩΝΟ]");
-        sanitized = sanitized.replace(/\b\d{9}\b/g, "[ΑΦΜ]");
-        sanitized = sanitized.replace(/\b[Α-Ω]{1,3}\s*\d{5,8}\b/g, "[ΑΔΤ]");
-        sanitized = sanitized.replace(/\b\d{5,}\b/g, "[ΑΡΙΘΜΟΣ]");
-        return sanitized;
-    }
-
-    // --- AI LOGIC (GEMINI API) ---
-    function toggleAI() {
-        let panel = document.getElementById("ai_settings_panel");
-        let arrow = document.getElementById("ai_arrow");
-        if (panel.style.display === "none") {
-            panel.style.display = "block";
-            arrow.innerHTML = "⬆️ Κλείσιμο";
-        } else {
-            panel.style.display = "none";
-            arrow.innerHTML = "⬇️ Άνοιγμα";
-        }
-    }
-
-    async function saveApiKeyAndFetchModels() {
-        let key = document.getElementById("gemini_api_key").value.trim();
-        if (!key) { alert("Παρακαλώ εισάγετε ένα έγκυρο API Key."); return; }
-        
-        localStorage.setItem("gemini_api_key", key);
-        
-        try {
-            let res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?key=${key}`);
-            let data = await res.json();
-            
-            if(data.error) {
-                alert("Σφάλμα ελέγχου κλειδιού: " + data.error.message);
-                return;
-            }
-            
-            let select = document.getElementById("gemini_model");
-            select.innerHTML = ""; 
-            
-            let validModels = data.models.filter(m => m.supportedGenerationMethods && m.supportedGenerationMethods.includes("generateContent"));
-            
-            validModels.forEach(m => {
-                let opt = document.createElement("option");
-                opt.value = m.name.replace("models/", "");
-                opt.text = m.displayName + " (" + opt.value + ")";
-                select.appendChild(opt);
-            });
-            
-            let pref = validModels.find(m => m.name.includes("gemini-1.5-flash-8b")) || 
-                       validModels.find(m => m.name.includes("gemini-1.5-flash")) || 
-                       validModels.find(m => m.name.includes("gemini-1.0-pro"));
-            
-            if(pref) {
-                select.value = pref.name.replace("models/", "");
-            }
-            
-            document.getElementById("model_selection_div").style.display = "flex";
-            document.getElementById("key_status").style.display = "block";
-            
-            localStorage.setItem("gemini_model", select.value);
-            
-            setTimeout(() => { document.getElementById("key_status").style.display = "none"; }, 3000);
-            
-        } catch(e) {
-            alert("Αποτυχία σύνδεσης. Ελέγξτε τη σύνδεσή σας στο internet.");
-        }
-    }
-
-    if (localStorage.getItem("gemini_api_key")) {
-        document.getElementById("gemini_api_key").value = localStorage.getItem("gemini_api_key");
-        
-        if(localStorage.getItem("gemini_model")) {
-            document.getElementById("model_selection_div").style.display = "flex";
-            let opt = document.createElement("option");
-            opt.value = localStorage.getItem("gemini_model");
-            opt.text = localStorage.getItem("gemini_model") + " (Αποθηκευμένο)";
-            document.getElementById("gemini_model").appendChild(opt);
-        }
-    }
-
-    async function callGeminiAPI(prompt, buttonId, spinnerId) {
-        let apiKey = localStorage.getItem("gemini_api_key");
-        let modelName = document.getElementById("gemini_model").value || localStorage.getItem("gemini_model");
-        
-        if (!apiKey) {
-            alert("Απαιτείται Gemini API Key! Ανοίξτε τις 'Ρυθμίσεις Τεχνητής Νοημοσύνης' στην κορυφή της σελίδας.");
-            return null;
-        }
-        if (!modelName) {
-            alert("Παρακαλώ πατήστε 'Σύνδεση & Εύρεση Μοντέλων' στις ρυθμίσεις AI για να φορτώσετε τα μοντέλα.");
-            return null;
-        }
-
-        let btn = document.getElementById(buttonId);
-        let spinner = document.getElementById(spinnerId);
-        btn.disabled = true;
-        spinner.style.display = "inline-block";
-
-        try {
-            let response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${modelName}:generateContent?key=${apiKey}`, {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({
-                    contents: [{ parts: [{ text: prompt }] }]
-                })
-            });
-            
-            let data = await response.json();
-            
-            btn.disabled = false;
-            spinner.style.display = "none";
-
-            if (data.error) {
-                if(data.error.message.includes("quota") || data.error.code === 429) {
-                     alert(`Όριο χρήσης! Η Google λέει ότι δεν έχετε δικαίωμα για το μοντέλο "${modelName}". Παρακαλώ ανοίξτε τις ρυθμίσεις, πατήστε 'Σύνδεση' και διαλέξτε άλλο (π.χ. gemini-1.5-flash-8b).`);
-                     return null;
-                }
-                throw new Error(data.error.message);
-            }
-            
-            return data.candidates[0].content.parts[0].text;
-            
-        } catch (e) {
-            btn.disabled = false;
-            spinner.style.display = "none";
-            alert("Σφάλμα επικοινωνίας με την AI: " + e.message);
-            return null;
-        }
-    }
-
-    async function checkGoldenRule() {
-        let text = document.getElementById("doc_testimony_simple").value.trim();
-        let resDiv = document.getElementById("ai_golden_rule_result");
-        
-        if (!text) {
-            resDiv.innerHTML = "Παρακαλώ γράψτε πρώτα την κατάθεση στο από πάνω πλαίσιο.";
-            resDiv.className = "ai-result error";
-            resDiv.style.display = "block";
-            return;
-        }
-
-        let safeText = sanitizeForAI(text);
-
-        let prompt = `Είσαι βοηθός Έλληνα Προανακριτικού Υπαλλήλου. Διάβασε την παρακάτω κατάθεση. Έλεγξε αν καλύπτονται τα 5 ερωτήματα του 'Χρυσού Κανόνα της Προανάκρισης': 
-        1) ΠΟΥ (τόπος), 2) ΠΟΤΕ (χρόνος), 3) ΠΟΙΟΣ (δράστης), 4) ΤΙ (αξιόποινη πράξη), 5) ΓΙΑΤΙ (κίνητρο). 
-        ΠΡΟΣΟΧΗ: Αν ο μάρτυρας αναφέρει ρητά "δεν γνωρίζω γιατί", "δεν ξέρω το λόγο", "αναίτια" ή παρόμοιες φράσεις, το ερώτημα "ΓΙΑΤΙ" θεωρείται ότι ΑΠΑΝΤΗΘΗΚΕ ΕΠΙΤΥΧΩΣ (βάλε ✅), καθώς διευκρινίστηκε η έλλειψη γνωστού κινήτρου.
-        Επίστρεψε ΜΟΝΟ μια πολύ σύντομη αναφορά με bullets (χρησιμοποίησε ✅ για όσα καλύπτονται επαρκώς και ❌ για όσα λείπουν εντελώς ή είναι ασαφή). 
-        Κατάθεση: "${safeText}"`;
-
-        resDiv.style.display = "none";
-        resDiv.className = "ai-result";
-        
-        let resultText = await callGeminiAPI(prompt, "btn_check_rule", "spinner_rule");
-        
-        if (resultText) {
-            resDiv.innerHTML = "<strong>Αξιολόγηση Χρυσού Κανόνα:</strong><br><br>" + resultText.replace(/\n/g, "<br>");
-            resDiv.style.display = "block";
-        }
-    }
-
-    async function generateChargeAI() {
-        let text = document.getElementById("ai_rough_notes").value.trim();
-        if (!text) {
-            alert("Παρακαλώ γράψτε μια σύντομη περιγραφή του συμβάντος στο πλαίσιο.");
-            return;
-        }
-
-        let safeText = sanitizeForAI(text);
-
-        let prompt = `Είσαι νομικός βοηθός Προανακριτικού Υπαλλήλου. Διάβασε την εξής απλή περιγραφή συμβάντος: "${safeText}".
-        Θέλω να συντάξεις 2 πράγματα:
-        1. Το 'Βασικό Κατηγορητήριο'. Βρες ποια άρθρα του Ελληνικού Ποινικού Κώδικα (π.χ. Κλοπή 372, Σωματική Βλάβη 308, Εξύβριση 361 κλπ) ή Ειδικών Ποινικών Νόμων παραβιάζονται. 
-        ΠΡΟΣΟΧΗ: Αν πρόκειται για συρροή (πολλαπλά αδικήματα) στον ίδιο χρόνο και τόπο, ΕΝΩΣΕ ΤΑ. ΜΗΝ γράφεις τον χρόνο και τον τόπο για το κάθε ένα ξεχωριστά. Γράψε τα με τη μορφή: "παράβαση των άρθρων [Χ, Υ, Ζ] Π.Κ. [Ονόματα αδικημάτων], πράξεις οι οποίες έλαβαν χώρα την [Ημερομηνία αν αναφέρεται] και ώρα [Ώρα] στο/στην [Τόπος αν αναφέρεται]." Αν είναι μόνο ένα αδίκημα, γράψε "πράξη η οποία...".
-        2. Τα 'Πραγματικά Περιστατικά'. Μετάτρεψε την απλή περιγραφή σε επίσημη αστυνομική/νομική γλώσσα (π.χ. "Ειδικότερα, την ανωτέρω ημέρα και ώρα, ο κατηγορούμενος..."). Μην βάζεις πραγματικά ονόματα, κράτα τα αρχικά.
-        
-        Δώσε την απάντησή σου ΑΥΣΤΗΡΑ με την εξής δομή και τίποτα άλλο:
-        [ΒΑΣΙΚΟ]
-        εδώ το κείμενο 1
-        [ΠΕΡΙΣΤΑΤΙΚΑ]
-        εδώ το κείμενο 2`;
-
-        let resultText = await callGeminiAPI(prompt, "btn_generate_charge", "spinner_charge");
-        
-        if (resultText) {
-            try {
-                let parts = resultText.split("[ΠΕΡΙΣΤΑΤΙΚΑ]");
-                let basicPart = parts[0].replace("[ΒΑΣΙΚΟ]", "").trim();
-                let detailsPart = parts[1].trim();
-
-                document.getElementById("apologia_charge_short").value = basicPart;
-                document.getElementById("apologia_charge_details").value = detailsPart;
-                
-                // Αποθήκευση στη μνήμη
-                saveMem("apologia_charge_short");
-                saveMem("apologia_charge_details");
-            } catch (e) {
-                alert("Δεν ήταν δυνατή η σωστή ανάγνωση της απάντησης του AI. Δοκιμάστε να γράψετε πιο καθαρά την περιγραφή.");
-            }
-        }
-    }
-
-
-    // --- ΚΛΑΣΙΚΕΣ ΛΕΙΤΟΥΡΓΙΕΣ ---
-    function addSelectedCrime() {
-        let dropdown = document.getElementById("ai_crime_dropdown");
-        let selectedCrime = dropdown.value;
-        if (!selectedCrime) return;
-        let lawInput = document.getElementById("ai_law");
-        if (lawInput.value.trim() === "") { lawInput.value = selectedCrime; } 
-        else { lawInput.value += " και " + selectedCrime; }
-        dropdown.value = ""; 
-    }
-
-    function clearCrimes() { document.getElementById("ai_law").value = ""; }
-
-    function generateAutoCharge() {
-        let lawInput = document.getElementById("ai_law").value.trim();
-        let dateStr = document.getElementById("ai_date").value.trim() || "...";
-        let timeStr = document.getElementById("ai_time").value.trim() || "...";
-        let locStr = document.getElementById("ai_loc").value.trim() || "...";
-        if (!lawInput) { alert("Επιλέξτε τουλάχιστον ένα Αδίκημα."); return; }
-        
-        let isMultiple = (lawInput.includes("και") || lawInput.includes(","));
-        let actString = isMultiple ? "πράξεις οι οποίες έλαβαν χώρα" : "πράξη η οποία έλαβε χώρα";
-        let arthraString = isMultiple ? "των άρθρων" : "του άρθρου";
-
-        document.getElementById("apologia_charge_short").value = `παράβαση ${arthraString} ${lawInput}, ${actString} την ${dateStr} και ώρα ${timeStr} στο/στην ${locStr}`;
-        if(document.getElementById("apologia_charge_details").value.trim() === "") {
-            document.getElementById("apologia_charge_details").value = "Ειδικότερα, την ανωτέρω ημέρα, ώρα και τόπο... ";
-        }
-        saveMem("apologia_charge_short");
-        saveMem("apologia_charge_details");
-    }
-
-    const dvQuestions = [
-        "Πότε άρχισε η κακοποίηση;", "Είναι χρόνια η κατάσταση αυτή;", "Υπάρχει κλιμάκωση της συχνότητας και σοβαρότητας επιθέσεων σε βάρος σας;",
-        "Ποιο είναι το πιο επικίνδυνο τραύμα που έχετε υποστεί και πότε το υποστήκατε;", "Υπάρχουν ανήλικα τέκνα στην οικογένεια; Έχει τελεστεί κάποιο αδίκημα ενδοοικογενειακής βίας σε βάρος τους ή ενώπιον τους;",
-        "Υπάρχουν όπλα στο σπίτι (μαχαίρια, ρόπαλα ή πυροβόλα όπλα κ.α.);", "Έχει χρησιμοποιήσει ή απειλήσει να χρησιμοποιήσει ο δράστης κάποιου είδους όπλο;",
-        "Έχει αποπειραθεί ο δράστης να σας στραγγαλίσει;", "Πίνει ο δράστης αλκοόλ ή παίρνει ναρκωτικά;", "Κακοποιεί ο δράστης όταν βρίσκεται υπό την επήρεια τους;",
-        "Έχει απειλήσει ο δράστης ότι θα σας σκοτώσει ή κάποιον άλλον;", "Φοβάστε ότι δράστης μπορεί να αποπειραθεί να σας δολοφονήσει;", "Φοβάστε ότι δράστης θα αυτοκτονήσει;",
-        "Είναι ο δράστης υπερβολικά ζηλιάρης;", "Πάσχει από κατάθλιψη;", "Διακατέχεστε από τάσεις αυτοκτονίας;", "Παρακολουθεί τις κινήσεις σας, σας κατασκοπεύει, σας ελέγχει ή σας παρενοχλεί;",
-        "Έχει ποινικό μητρώο ο δράστης; Έχει τραυματίσει άλλους ανθρώπους;", "Έχετε πληροφορίες που θα βοηθούσαν στη σύλληψη του δράστη (οικία, τόπος εργασίας, μέρη που συχνάζει κ.α.);",
-        "Επιθυμείτε την εξέταση σας από Ιατροδικαστή; Επιθυμείτε η Υπηρεσία μας να φροντίσει τη μεταφορά σας στην Ιατροδικαστική Υπηρεσία Θεσσαλονίκης για εξέταση;",
-        "Γνωρίζετε για την εφαρμογή “Κομβίο Πανικού-Panic Button”; Επιθυμείτε να σας χορηγηθεί;", "Επιθυμείτε τη δυνατότητα προσωρινής μεταφοράς και φύλαξης σας σε ασφαλή χώρο, ο οποίος εξασφαλίστηκε με μέριμνα της Υπηρεσίας μας;",
-        "Σας έχει παρασχεθεί ιατροφαρμακευτική περίθαλψη για το τραύμα που υποστήκατε σε κάποιο νοσηλευτικό ίδρυμα; Μεταβήκατε με σταθμό του ΕΚΑΒ ή με ιδία μέσα;",
-        "Διαθέτετε κάποιο στοιχείο όπως φωτογραφίες, απειλητικά μηνύματα κ.α.; Προτείνετε κάποιον μάρτυρα;"
-    ];
-
-    window.onload = function() {
-        const days = ['Κυριακή', 'Δευτέρα', 'Τρίτη', 'Τετάρτη', 'Πέμπτη', 'Παρασκευή', 'Σάββατο'];
-        const months = ['Ιανουαρίου', 'Φεβρουαρίου', 'Μαρτίου', 'Απριλίου', 'Μαΐου', 'Ιουνίου', 'Ιουλίου', 'Αυγούστου', 'Σεπτεμβρίου', 'Οκτωβρίου', 'Νοεμβρίου', 'Δεκεμβρίου'];
-        
-        const now = new Date();
-        const dateStr = String(now.getDate()).padStart(2, '0') + "-" + String(now.getMonth()+1).padStart(2, '0') + "-" + now.getFullYear();
-        
-        document.getElementById('doc_day').value = days[now.getDay()];
-        document.getElementById('doc_date').value = String(now.getDate()).padStart(2, '0');
-        document.getElementById('doc_month').value = months[now.getMonth()];
-        document.getElementById('doc_year').value = now.getFullYear();
-        
-        refreshTimes(); 
-
-        document.getElementById('ai_date').value = dateStr;
-        document.getElementById('arr_street_date').value = dateStr;
-
-        buildDVForm();
-
-        // ΦΟΡΤΩΣΗ ΑΟΡΑΤΗΣ ΜΝΗΜΗΣ (Auto-save & Υπάλληλοι)
-        loadMem("doc_anakr");
-        loadMem("doc_banakr");
-        loadMem("doc_testimony_simple");
-        loadMem("prok_abm");
-        loadMem("prok_plea");
-        loadMem("ai_rough_notes");
-        loadMem("apologia_charge_short");
-        loadMem("apologia_charge_details");
-        loadMem("apologia_plea");
-    };
-
-    function buildDVForm() {
-        const container = document.getElementById("dv_mode_container");
-        let html = `<div class="dv-item large"><label style="font-size: 14px; color: #0056b3;">ΕΡΩΤΗΣΗ: Τι προσήλθατε να καταθέσετε στο Α.Τ. Βόλβης;</label><textarea id="dv_q_main" placeholder="Περιγράψτε το αρχικό ιστορικό..." oninput="saveMem(this.id)"></textarea></div>`;
-        dvQuestions.forEach((q, index) => {
-            html += `<div class="dv-item"><label>ΕΡΩΤΗΣΗ: ${q}</label><textarea id="dv_q_${index}" oninput="saveMem(this.id)"></textarea></div>`;
-        });
-        html += `<div class="dv-item"><label>ΕΡΩΤΗΣΗ: Έχετε να προσθέσετε κάτι άλλο;</label><textarea id="dv_q_last" oninput="saveMem(this.id)">Επιθυμώ την ποινική δίωξη του δράστη...</textarea></div>`;
-        container.innerHTML = html;
-
-        // Φόρτωση μνήμης για τα πεδία της Ενδοοικογενειακής
-        loadMem("dv_q_main");
-        dvQuestions.forEach((q, i) => loadMem("dv_q_" + i));
-        loadMem("dv_q_last");
-    }
-
     function switchTab(tabId, btnElement) {
         document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
         document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
@@ -888,71 +579,62 @@
         document.getElementById('tab_' + tabId).classList.add('active');
     }
 
-    function toTitleCase(str) { if (!str) return ""; return str.toLowerCase().charAt(0).toUpperCase() + str.toLowerCase().slice(1); }
-    function toTitleCaseWords(str) { if (!str) return ""; return str.split(" ").map(w => { if (w.toUpperCase() === "Α.Τ.") return "Α.Τ."; if (w.toUpperCase() === "Τ.Α.") return "Τ.Α."; return w.charAt(0).toUpperCase() + w.slice(1).toLowerCase(); }).join(" "); }
-    function toGenitive(name) { if(!name) return ""; let n = toTitleCase(name); if (n.endsWith("ος")) return n.slice(0, -2) + "ου"; if (n.endsWith("ης")) return n.slice(0, -1); if (n.endsWith("ας")) return n.slice(0, -1); if (n.endsWith("α")) return n + "ς"; if (n.endsWith("η")) return n + "ς"; return n; }
-    function keepOnlyGreek(str) { if (!str) return ""; return str.replace(/[a-zA-Z]/g, '').trim(); }
-    
     function clearFields() {
-        if (confirm("Είστε σίγουροι; Θα διαγραφούν ΟΛΑ τα στοιχεία προσώπου και ό,τι κείμενο έχετε πληκτρολογήσει στις καταθέσεις!")) {
+        if (confirm("Είστε σίγουροι; Θα διαγραφούν ΟΛΑ τα στοιχεία προσώπου και ό,τι κείμενο έχετε πληκτρολογήσει!")) {
             document.getElementById("pol_data").value = "";
             let inputs = document.querySelectorAll('.grid-form input:not([id^="doc_"]), .tab-content textarea, .ai-grid input, .arrest-grid input, #ai_law, #apologia_rights, #apologia_past');
             inputs.forEach(input => input.value = "");
             document.getElementById("apologia_rights").value = "Όχι.";
             document.getElementById("apologia_past").value = "Όχι, δεν έχω κατηγορηθεί ξανά.";
-            clearMem(); // Σβήνει το auto-save!
+            clearMem();
         }
     }
 
+    // ==========================================
+    // ΛΟΓΙΚΗ ΕΞΑΓΩΓΗΣ ΑΠΟ POL
+    // ==========================================
+    function toTitleCase(str) { if (!str) return ""; return str.toLowerCase().charAt(0).toUpperCase() + str.toLowerCase().slice(1); }
+    function toTitleCaseWords(str) { if (!str) return ""; return str.split(" ").map(w => { if (w.toUpperCase() === "Α.Τ.") return "Α.Τ."; if (w.toUpperCase() === "Τ.Α.") return "Τ.Α."; return w.charAt(0).toUpperCase() + w.slice(1).toLowerCase(); }).join(" "); }
+    function toGenitive(name) { if(!name) return ""; let n = toTitleCase(name); if (n.endsWith("ος")) return n.slice(0, -2) + "ου"; if (n.endsWith("ης")) return n.slice(0, -1); if (n.endsWith("ας")) return n.slice(0, -1); if (n.endsWith("α")) return n + "ς"; if (n.endsWith("η")) return n + "ς"; return n; }
+    function keepOnlyGreek(str) { if (!str) return ""; return str.replace(/[a-zA-Z]/g, '').trim(); }
+    
     function parsePOL() {
         var rawTxt = document.getElementById("pol_data").value;
         if (!rawTxt) { alert("Παρακαλώ επικολλήστε τα στοιχεία."); return; }
         var txt = rawTxt.replace(/[\n\r\t\u00A0]+/g, " ").replace(/\s+/g, " ");
         function extract(regex) { var m = txt.match(regex); return m && m[1] ? m[1].trim() : ""; }
-        let isFemale = /Γυναίκα/i.test(txt) || /ΓΥΝΑΙΚΑ/i.test(txt);
-        document.getElementById("gender").value = isFemale ? "F" : "M";
+        
+        document.getElementById("gender").value = (/Γυναίκα/i.test(txt) || /ΓΥΝΑΙΚΑ/i.test(txt)) ? "F" : "M";
 
         let surname = extract(/Επώνυμο(.*?)\s*Επώνυμο \(Λατιν\.\)/) || extract(/Επώνυμο(.*?)\s*Όνομα/);
         let name = extract(/Όνομα(.*?)\s*Όνομα \(Λατιν\.\)/) || extract(/Όνομα(.*?)\s*Όνομα Πατρός/);
         let father = extract(/Όνομα Πατρός(.*?)\s*Όνομα Πατέρα \(Λατιν\.\)/) || extract(/Όνομα Πατρός(.*?)\s*Επώνυμο Πατρός/);
-        let motherRaw = extract(/Όνομα Μητρός(.*?)\s*Επώνυμο Μητρός/);
-        let mother = keepOnlyGreek(motherRaw);
+        let mother = keepOnlyGreek(extract(/Όνομα Μητρός(.*?)\s*Επώνυμο Μητρός/));
         let dobMatch = txt.match(/Ημ\/νία Γέννησης\s*(\d{2}\/\d{2}\/\d{4})/);
-        let dob = dobMatch ? dobMatch[1] : "";
-        let pobFull = extract(/Τόπος Γέννησης(.*?)(?:Χώρα Γέννησης|Υπηρεσία χρέωσης)/);
-        pobFull = keepOnlyGreek(pobFull);
-        let pob = pobFull.split(/\s+/)[0]; 
+        let pobFull = keepOnlyGreek(extract(/Τόπος Γέννησης(.*?)(?:Χώρα Γέννησης|Υπηρεσία χρέωσης)/));
         let authDateMatch = txt.match(/Ημ\/νια Έκδοσης\s*(\d{2}\/\d{2}\/\d{4})/);
-        let authDate = authDateMatch ? authDateMatch[1] : "";
-        let authFull = extract(/Αρχή Έκδοσης(.*?)\s*Ημ\/νια Έκδοσης/);
-        let auth = authFull.replace(/^\d+\s*-\s*/, ""); 
-        let area = extract(/Περιοχή(.*?)\s*Οδός/);
+        let authFull = extract(/Αρχή Έκδοσης(.*?)\s*Ημ\/νια Έκδοσης/).replace(/^\d+\s*-\s*/, ""); 
         let dimosFull = extract(/Δημότης(.*?)\s*Αριθμός Δημοτολογίου/);
-        let dimos = "";
-        if (dimosFull) { let parts = dimosFull.split(" "); dimos = toTitleCaseWords(parts[0]) + (parts[1] ? " - " + toTitleCaseWords(parts[1]) : ""); }
-        let odos = extract(/Οδός(.*?)\s*Αριθμός/);
+        let dimos = dimosFull ? toTitleCaseWords(dimosFull.split(" ")[0]) + (dimosFull.split(" ")[1] ? " - " + toTitleCaseWords(dimosFull.split(" ")[1]) : "") : "";
         let arithmosMatch = txt.match(/Οδός.*?Αριθμός(.*?)\s*(?:Ταχ\.Κώδικας|Τηλέφωνο|Άλλα)/);
-        let arithmos = arithmosMatch ? arithmosMatch[1].trim() : "";
         let phoneMatch = txt.match(/Τηλέφωνο\s*(\d{10})/);
-        let phone = phoneMatch ? phoneMatch[1] : "";
         let cleanTxtForAdt = txt.replace(/Αντικατάστασης\s*[Α-ΩA-Z0-9]+/g, "");
         let adts = cleanTxtForAdt.match(/[Α-ΩA-Z]{1,3}\d{5,8}/g);
-        let adt = adts && adts.length > 0 ? adts[adts.length - 1] : "";
 
         document.getElementById("surname").value = surname.toUpperCase(); 
         document.getElementById("name").value = toTitleCase(name); 
         document.getElementById("father").value = toGenitive(father); 
         document.getElementById("mother").value = toGenitive(mother); 
-        document.getElementById("dob").value = dob ? dob.replace(/\//g, "-") : "";
-        document.getElementById("pob").value = toTitleCase(pob);
-        document.getElementById("area").value = toGenitive(area); 
+        document.getElementById("dob").value = dobMatch ? dobMatch[1].replace(/\//g, "-") : "";
+        document.getElementById("pob").value = toTitleCase(pobFull.split(/\s+/)[0]);
+        document.getElementById("area").value = toGenitive(extract(/Περιοχή(.*?)\s*Οδός/)); 
         document.getElementById("dimos").value = dimos;
-        document.getElementById("odos").value = toTitleCaseWords(odos);
-        document.getElementById("arithmos").value = arithmos;
-        document.getElementById("adt").value = adt;
-        document.getElementById("authDate").value = authDate ? authDate.replace(/\//g, "-") : "";
-        document.getElementById("auth").value = toTitleCaseWords(auth);
-        if (phone) document.getElementById("phone").value = phone;
+        document.getElementById("odos").value = toTitleCaseWords(extract(/Οδός(.*?)\s*Αριθμός/));
+        document.getElementById("arithmos").value = arithmosMatch ? arithmosMatch[1].trim() : "";
+        document.getElementById("adt").value = adts && adts.length > 0 ? adts[adts.length - 1] : "";
+        document.getElementById("authDate").value = authDateMatch ? authDateMatch[1].replace(/\//g, "-") : "";
+        document.getElementById("auth").value = toTitleCaseWords(authFull);
+        if (phoneMatch) document.getElementById("phone").value = phoneMatch[1];
     }
 
     function getProfileText() {
@@ -968,11 +650,138 @@
         return text.replace(/\s+/g, ' ').replace(/ ,/g, ',');
     }
 
-    let pStyle = "text-align: justify; font-family: 'Times New Roman'; font-size: 12pt; line-height: 115%; margin: 0cm; padding: 0cm;";
+    function copyProfileText() {
+        let text = getProfileText();
+        if(!text || text.trim().length < 10) { alert("Δεν υπάρχουν επαρκή στοιχεία για αντιγραφή."); return; }
+        navigator.clipboard.writeText(text).then(() => { alert("Τα στοιχεία αντιγράφηκαν επιτυχώς στο πρόχειρο!"); })
+        .catch(err => { alert("Σφάλμα κατά την αντιγραφή: " + err); });
+    }
+
+    // ==========================================
+    // AI LOGIC (GEMINI API)
+    // ==========================================
+    function sanitizeForAI(text) {
+        if(!text) return "";
+        let sanitized = text;
+        sanitized = sanitized.replace(/\b[26]\d{9}\b/g, "[ΤΗΛΕΦΩΝΟ]");
+        sanitized = sanitized.replace(/\b\d{9}\b/g, "[ΑΦΜ]");
+        sanitized = sanitized.replace(/\b[Α-Ω]{1,3}\s*\d{5,8}\b/g, "[ΑΔΤ]");
+        sanitized = sanitized.replace(/\b\d{5,}\b/g, "[ΑΡΙΘΜΟΣ]");
+        return sanitized;
+    }
+
+    function toggleAI() {
+        let panel = document.getElementById("ai_settings_panel");
+        let arrow = document.getElementById("ai_arrow");
+        if (panel.style.display === "none") {
+            panel.style.display = "block"; arrow.innerHTML = "⬆️ Κλείσιμο";
+        } else {
+            panel.style.display = "none"; arrow.innerHTML = "⬇️ Άνοιγμα";
+        }
+    }
+
+    async function saveApiKeyAndFetchModels() {
+        let key = document.getElementById("gemini_api_key").value.trim();
+        if (!key) { alert("Παρακαλώ εισάγετε ένα έγκυρο API Key."); return; }
+        localStorage.setItem("gemini_api_key", key);
+        
+        try {
+            let res = await fetch(`https://generativelanguage.googleapis.com/v1beta/models?key=${key}`);
+            let data = await res.json();
+            if(data.error) { alert("Σφάλμα ελέγχου κλειδιού: " + data.error.message); return; }
+            
+            let select = document.getElementById("gemini_model");
+            select.innerHTML = ""; 
+            let validModels = data.models.filter(m => m.supportedGenerationMethods && m.supportedGenerationMethods.includes("generateContent"));
+            
+            validModels.forEach(m => {
+                let opt = document.createElement("option");
+                opt.value = m.name.replace("models/", "");
+                opt.text = m.displayName + " (" + opt.value + ")";
+                select.appendChild(opt);
+            });
+            
+            let pref = validModels.find(m => m.name.includes("gemini-1.5-flash-8b")) || 
+                       validModels.find(m => m.name.includes("gemini-1.5-flash")) || 
+                       validModels.find(m => m.name.includes("gemini-1.0-pro"));
+            if(pref) { select.value = pref.name.replace("models/", ""); }
+            
+            document.getElementById("model_selection_div").style.display = "flex";
+            document.getElementById("key_status").style.display = "block";
+            localStorage.setItem("gemini_model", select.value);
+            setTimeout(() => { document.getElementById("key_status").style.display = "none"; }, 3000);
+        } catch(e) { alert("Αποτυχία σύνδεσης. Ελέγξτε τη σύνδεσή σας."); }
+    }
+
+    async function callGeminiAPI(prompt, buttonId, spinnerId) {
+        let apiKey = localStorage.getItem("gemini_api_key");
+        let modelName = document.getElementById("gemini_model").value || localStorage.getItem("gemini_model");
+        if (!apiKey) { alert("Απαιτείται Gemini API Key! Ανοίξτε τις 'Ρυθμίσεις Τεχνητής Νοημοσύνης' στην κορυφή της σελίδας."); return null; }
+        if (!modelName) { alert("Παρακαλώ πατήστε 'Σύνδεση & Εύρεση Μοντέλων' στις ρυθμίσεις AI."); return null; }
+
+        let btn = document.getElementById(buttonId); let spinner = document.getElementById(spinnerId);
+        btn.disabled = true; spinner.style.display = "inline-block";
+
+        try {
+            let response = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${modelName}:generateContent?key=${apiKey}`, {
+                method: "POST", headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ contents: [{ parts: [{ text: prompt }] }] })
+            });
+            let data = await response.json();
+            btn.disabled = false; spinner.style.display = "none";
+
+            if (data.error) {
+                if(data.error.message.includes("quota") || data.error.code === 429) {
+                     alert(`Όριο χρήσης! Παρακαλώ διαλέξτε άλλο μοντέλο από τις ρυθμίσεις (π.χ. gemini-1.5-flash).`); return null;
+                }
+                throw new Error(data.error.message);
+            }
+            return data.candidates[0].content.parts[0].text;
+        } catch (e) {
+            btn.disabled = false; spinner.style.display = "none";
+            alert("Σφάλμα: " + e.message); return null;
+        }
+    }
+
+    async function checkGoldenRule() {
+        let text = document.getElementById("doc_testimony_simple").value.trim();
+        let resDiv = document.getElementById("ai_golden_rule_result");
+        if (!text) {
+            resDiv.innerHTML = "Παρακαλώ γράψτε πρώτα την κατάθεση."; resDiv.className = "ai-result error"; resDiv.style.display = "block"; return;
+        }
+        let safeText = sanitizeForAI(text);
+        let prompt = `Είσαι βοηθός Προανακριτικού Υπαλλήλου. Διάβασε την κατάθεση. Έλεγξε αν καλύπτονται: 1) ΠΟΥ (τόπος), 2) ΠΟΤΕ (χρόνος), 3) ΠΟΙΟΣ (δράστης), 4) ΤΙ (αξιόποινη πράξη), 5) ΓΙΑΤΙ (κίνητρο). ΠΡΟΣΟΧΗ: Αν ο μάρτυρας αναφέρει "δεν γνωρίζω γιατί" ή "αναίτια", το "ΓΙΑΤΙ" θεωρείται ότι ΑΠΑΝΤΗΘΗΚΕ ΕΠΙΤΥΧΩΣ (✅). Επίστρεψε ΜΟΝΟ μια σύντομη αναφορά με bullets (✅ ή ❌). Κατάθεση: "${safeText}"`;
+        resDiv.style.display = "none"; resDiv.className = "ai-result";
+        let resultText = await callGeminiAPI(prompt, "btn_check_rule", "spinner_rule");
+        if (resultText) { resDiv.innerHTML = "<strong>Αξιολόγηση Χρυσού Κανόνα:</strong><br><br>" + resultText.replace(/\n/g, "<br>"); resDiv.style.display = "block"; }
+    }
+
+    async function generateChargeAI() {
+        let text = document.getElementById("ai_rough_notes").value.trim();
+        if (!text) { alert("Παρακαλώ γράψτε μια σύντομη περιγραφή."); return; }
+        let safeText = sanitizeForAI(text);
+        let prompt = `Είσαι νομικός βοηθός Προανακριτικού Υπαλλήλου. Διάβασε την περιγραφή συμβάντος: "${safeText}".
+        Σύνταξε: 1. Το 'Βασικό Κατηγορητήριο' βρίσκοντας τα άρθρα του ΠΚ. Αν είναι συρροή (ίδιος χρόνος/τόπος), ΕΝΩΣΕ ΤΑ ("παράβαση των άρθρων Χ, Υ Π.Κ., πράξεις οι οποίες έλαβαν χώρα...").
+        2. Τα 'Πραγματικά Περιστατικά' (π.χ. "Ειδικότερα, την ανωτέρω ημέρα και ώρα..."). Μην βάζεις πραγματικά ονόματα.
+        Δώσε απάντηση ΑΥΣΤΗΡΑ με δομή: [ΒΑΣΙΚΟ] κείμενο 1 [ΠΕΡΙΣΤΑΤΙΚΑ] κείμενο 2`;
+        let resultText = await callGeminiAPI(prompt, "btn_generate_charge", "spinner_charge");
+        if (resultText) {
+            try {
+                let parts = resultText.split("[ΠΕΡΙΣΤΑΤΙΚΑ]");
+                document.getElementById("apologia_charge_short").value = parts[0].replace("[ΒΑΣΙΚΟ]", "").trim();
+                document.getElementById("apologia_charge_details").value = parts[1].trim();
+                saveMem("apologia_charge_short"); saveMem("apologia_charge_details");
+            } catch (e) { alert("Αποτυχία ανάγνωσης απάντησης AI."); }
+        }
+    }
+
+    // ==========================================
+    // ΛΟΓΙΚΗ ΕΞΑΓΩΓΗΣ ΣΕ WORD (ΟΛΑ ΤΑ ΕΓΓΡΑΦΑ)
+    // ==========================================
+    const pStyle = "text-align: justify; font-family: 'Times New Roman'; font-size: 12pt; line-height: 115%; margin: 0cm; padding: 0cm;";
 
     function formatTextToParagraphs(text) {
-        let lines = text.split(/\n/);
-        let html = "";
+        let lines = text.split(/\n/); let html = "";
         for (let i = 0; i < lines.length; i++) {
             let line = lines[i].trim();
             if (line === "") continue; 
@@ -982,410 +791,242 @@
         return html;
     }
 
-    function buildWitnessTestimonyText(isDV) {
-        let copyOption = isDV ? document.getElementById("doc_copy_dv").value : document.getElementById("doc_copy_simple").value;
-        let paravoloAnswer = isDV ? document.getElementById("doc_paravolo_dv").value : document.getElementById("doc_paravolo_simple").value;
-        let finalHtml = "";
-        
-        if (!isDV) {
-            let story = document.getElementById("doc_testimony_simple").value.trim();
-            finalHtml += `<p style="${pStyle}"><b>ΕΡΩΤΗΣΗ:</b> Τι προσήλθατε να καταθέσετε στο Α.Τ. Βόλβης;</p>`;
-            if (story) { finalHtml += formatTextToParagraphs("<b>ΑΠΟΚΡΙΣΗ:</b> " + story); } 
-            else { finalHtml += `<p style="${pStyle}"><b>ΑΠΟΚΡΙΣΗ:</b> </p>`; }
-            finalHtml += `<p style="${pStyle}">Κάτι άλλο δεν έχω να προσθέσω και υπογράφω.</p>`;
-        } else {
-            let mainQ = document.getElementById("dv_q_main").value.trim();
-            finalHtml += `<p style="${pStyle}"><b>ΕΡΩΤΗΣΗ:</b> Τι προσήλθατε να καταθέσετε στο Α.Τ. Βόλβης; <b>ΑΠΟΚΡΙΣΗ:</b> ${mainQ}</p>`;
-            
-            dvQuestions.forEach((q, index) => {
-                let ans = document.getElementById(`dv_q_${index}`).value.trim();
-                if (ans) {
-                    finalHtml += `<p style="${pStyle}"><b>ΕΡΩΤΗΣΗ:</b> ${q}</p>`;
-                    finalHtml += formatTextToParagraphs("<b>ΑΠΟΚΡΙΣΗ:</b> " + ans);
-                }
-            });
-            
-            let lastQ = document.getElementById("dv_q_last").value.trim();
-            if (lastQ) {
-                finalHtml += `<p style="${pStyle}"><b>ΕΡΩΤΗΣΗ:</b> Έχετε να προσθέσετε κάτι άλλο;</p>`;
-                finalHtml += formatTextToParagraphs("<b>ΑΠΟΚΡΙΣΗ:</b> " + lastQ);
-            }
-        }
-        
-        if (isDV) {
-            if (paravoloAnswer === "YES_3DAYS") {
-                finalHtml += `<p style="${pStyle}">&nbsp;</p><p style="${pStyle}"><b>ΕΡΩΤΗΣΗ:</b> Γνωρίζεις ότι για την άσκηση της ποινικής δίωξης αναφορικά με τα κατ' έγκληση διωκόμενα αδικήματα που περιγράφεις απαιτείται η προσκόμιση παραβόλου;</p><p style="${pStyle}"><b>ΑΠΟΚΡΙΣΗ:</b> Ναι το γνωρίζω και θα το προσκομίσω εντός 3 ημερών.</p>`;
-            } else if (paravoloAnswer === "ONLY_EX_OFFICIO") {
-                finalHtml += `<p style="${pStyle}">&nbsp;</p><p style="${pStyle}"><b>ΕΡΩΤΗΣΗ:</b> Γνωρίζεις ότι για την άσκηση της ποινικής δίωξης αναφορικά με τα κατ' έγκληση διωκόμενα αδικήματα που περιγράφεις απαιτείται η προσκόμιση παραβόλου;</p><p style="${pStyle}"><b>ΑΠΟΚΡΙΣΗ:</b> Επιθυμώ την ποινική δίωξη του δράστη μόνο για τα αυτεπάγγελτα αδικήματα εις βάρος μου.</p>`;
-            }
-        } else {
-            if (paravoloAnswer === "ΝΑΙ") {
-                finalHtml += `<p style="${pStyle}">&nbsp;</p><p style="${pStyle}"><b>ΕΡΩΤΗΣΗ:</b> Γνωρίζετε ότι σύμφωνα με τον Νόμο 5090/24 για την υποβολή έγκλησης απαιτείται η προσκόμιση παράβολου ύψους εκατό -#100# ευρώ.;</p><p style="${pStyle}"><b>ΑΠΟΚΡΙΣΗ:</b> Ναι το γνωρίζω και θα σας το καταθέσω εντός τριών -3- ημερών.</p>`;
-            }
-        }
-
-        if (copyOption === "YES") {
-            finalHtml += `<p style="${pStyle}">&nbsp;</p><p style="${pStyle}"><b>ΕΡΩΤΗΣΗ:</b> Επιθυμείτε αντίγραφο της παρούσας έγκλησης κατ’ εφαρμογή του άρθρου 58 παρ. 1 Ν.4478/2017;</p><p style="${pStyle}"><b>ΑΠΟΚΡΙΣΗ:</b> Ναι, επιθυμώ.</p>`;
-        } else if (copyOption === "NO") {
-            finalHtml += `<p style="${pStyle}">&nbsp;</p><p style="${pStyle}"><b>ΕΡΩΤΗΣΗ:</b> Επιθυμείτε αντίγραφο της παρούσας έγκλησης κατ’ εφαρμογή του άρθρου 58 παρ. 1 Ν.4478/2017;</p><p style="${pStyle}"><b>ΑΠΟΚΡΙΣΗ:</b> Όχι, δεν επιθυμώ.</p>`;
-        }
-        
-        return finalHtml;
+    function addSelectedCrime() {
+        let dd = document.getElementById("ai_crime_dropdown"); let sc = dd.value; if (!sc) return;
+        let lawInput = document.getElementById("ai_law");
+        lawInput.value = lawInput.value.trim() === "" ? sc : lawInput.value + " και " + sc;
+        dd.value = ""; 
+    }
+    function clearCrimes() { document.getElementById("ai_law").value = ""; }
+    function generateAutoCharge() {
+        let lawInput = document.getElementById("ai_law").value.trim();
+        if (!lawInput) { alert("Επιλέξτε αδίκημα."); return; }
+        let isMultiple = lawInput.includes("και") || lawInput.includes(",");
+        let actStr = isMultiple ? "πράξεις οι οποίες έλαβαν χώρα" : "πράξη η οποία έλαβε χώρα";
+        let arthraStr = isMultiple ? "των άρθρων" : "του άρθρου";
+        document.getElementById("apologia_charge_short").value = `παράβαση ${arthraStr} ${lawInput}, ${actStr} την ${document.getElementById("ai_date").value.trim()} και ώρα ${document.getElementById("ai_time").value.trim()} στο/στην ${document.getElementById("ai_loc").value.trim()}`;
+        if(document.getElementById("apologia_charge_details").value.trim() === "") document.getElementById("apologia_charge_details").value = "Ειδικότερα, την ανωτέρω ημέρα, ώρα και τόπο... ";
+        saveMem("apologia_charge_short"); saveMem("apologia_charge_details");
     }
 
-    function downloadWordDocument(htmlContent, filename) {
-        var blob = new Blob(['\ufeff', htmlContent], { type: 'application/msword' });
-        var url = URL.createObjectURL(blob);
-        var link = document.createElement('A'); link.href = url; link.download = filename; 
+    // -- Κεντρική Συνάρτηση Γέννησης Εγγράφου --
+    function makeDoc(title, headerTitle, bodyContent, filename) {
+        let finalHtml = `<p style="text-align: center; font-weight: bold; text-decoration: underline; font-family: 'Times New Roman'; font-size: 14pt; line-height: 115%; margin: 0cm 0cm 6pt 0cm;">${headerTitle}</p>${bodyContent}`;
+        let blob = new Blob(['\ufeff', `<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>${title}</title></head><body>${finalHtml}</body></html>`], { type: 'application/msword' });
+        let url = URL.createObjectURL(blob); let link = document.createElement('a'); link.href = url; link.download = filename; 
         document.body.appendChild(link); link.click(); document.body.removeChild(link);
     }
 
+    function sigBlock(role1, role2, role3) {
+        return `<p style="${pStyle}">&nbsp;</p><table style="width: 100%; font-family: 'Times New Roman'; font-size: 12pt; text-align: center; margin-top: 0cm; margin-bottom: 0cm; padding: 0cm;" border="0"><tr><td style="width: 33%;">${role1}</td><td style="width: 33%;">${role2}</td><td style="width: 33%;">${role3}</td></tr></table>`;
+    }
+
+    function getD() {
+        let v = id => document.getElementById(id) ? document.getElementById(id).value.trim() : "";
+        let g = v("gender");
+        return {
+            v: v, anakr: v("doc_anakr"), banakr: v("doc_banakr"),
+            a_o: g === 'M' ? "ο" : "η", a_os: g === 'M' ? "ο οποίος" : "η οποία",
+            a_tou: g === 'M' ? "του" : "της", a_ton: g === 'M' ? "τον" : "την",
+            a_auton: g === 'M' ? "αυτόν" : "αυτήν", a_exet: g === 'M' ? "εξεταζόμενος" : "εξεταζόμενη",
+            a_sign: g === 'M' ? "Ο Εξετασθείς" : "Η Εξετασθείσα",
+            dateStr: `${v("doc_date")} του μήνα ${v("doc_month")} του έτους ${v("doc_year")} ημέρα της εβδομάδας ${v("doc_day")}`,
+            prof: getProfileText()
+        };
+    }
+
+    // 1. ΑΠΛΗ ΕΝΟΡΚΗ
     function exportToWord() {
-        let v = id => document.getElementById(id).value.trim(); 
-        let gender = document.getElementById("gender").value; 
-        let anakr = document.getElementById("doc_anakr").value; let banakr = document.getElementById("doc_banakr").value;
-        let relation = document.getElementById("doc_relation_simple").value; 
-        let a_o = (gender === 'M') ? "ο" : "η"; let a_os = (gender === 'M') ? "ο οποίος" : "η οποία"; let a_tou = (gender === 'M') ? "του" : "της"; let a_exet = (gender === 'M') ? "εξεταζόμενος" : "εξεταζόμενη"; let a_sign = (gender === 'M') ? "Ο Εξετασθείς" : "Η Εξετασθείσα";
+        let d = getD(); let rel = d.v("doc_relation_simple"); let copy = d.v("doc_copy_simple"); let parav = d.v("doc_paravolo_simple");
+        let body = `<p style="${pStyle}">Στην Ασπροβάλτα, σήμερα την ${d.dateStr} και ώρα ${d.v("doc_start")} ενώπιον εµού του ${d.anakr} του Α.T. Βόλβης, παρισταμένου και του ${d.banakr} της ίδιας υπηρεσίας, που προσλήφθηκε ως Β' Ανακριτικός Υπάλληλος, εμφανίσθηκε ${d.a_o} κατωτέρω μάρτυρας, ${d.a_os}, αφού ερωτήθηκε για την ταυτότητά ${d.a_tou} κλπ., απάντησε ότι ονομάζεται ${d.prof} και ότι ${rel}.</p>
+        <p style="${pStyle}">Έπειτα ${d.a_o} ${d.a_exet}, αφού έδωσε τον προβλεπόμενο όρκο από τα άρθρα 219 και 220 παρ. 1 του Κ.Π.Δ. εξετάζεται ως ακολούθως:</p><p style="${pStyle}">&nbsp;</p>
+        <p style="${pStyle}"><b>ΕΡΩΤΗΣΗ:</b> Τι προσήλθατε να καταθέσετε στο Α.Τ. Βόλβης;</p>
+        ${formatTextToParagraphs("<b>ΑΠΟΚΡΙΣΗ:</b> " + d.v("doc_testimony_simple"))}`;
         
-        var body = `
-        <p style="text-align: center; font-weight: bold; text-decoration: underline; font-family: 'Times New Roman'; font-size: 14pt; line-height: 115%; margin: 0cm 0cm 6pt 0cm; padding: 0cm;">ΕΚΘΕΣΗ ΕΝΟΡΚΗΣ ΕΞΕΤΑΣΗΣ ΜΑΡΤΥΡΑ (Κ.Π.Δ.)</p>
-        <p style="${pStyle}">Στην Ασπροβάλτα, σήμερα την ${v("doc_date")} του μήνα ${v("doc_month")} του έτους ${v("doc_year")} ημέρα της εβδομάδας ${v("doc_day")} και ώρα ${v("doc_start")} ενώπιον εµού του ${anakr} του Α.T. Βόλβης, παρισταμένου και του ${banakr} της ίδιας υπηρεσίας, που προσλήφθηκε ως Β' Ανακριτικός Υπάλληλος, εμφανίσθηκε ${a_o} κατωτέρω μάρτυρας, ${a_os}, αφού ερωτήθηκε για την ταυτότητά ${a_tou} κλπ., απάντησε ότι ονομάζεται ${getProfileText()} και ότι ${relation}.</p>
-        <p style="${pStyle}">Έπειτα ${a_o} ${a_exet}, αφού έδωσε τον προβλεπόμενο όρκο από τα άρθρα 219 και 220 παρ. 1 του Κ.Π.Δ. εξετάζεται ως ακολούθως:</p>
-        <p style="${pStyle}">&nbsp;</p>
-        ${buildWitnessTestimonyText(false)}
-        <p style="${pStyle}">&nbsp;</p>
-        <p style="${pStyle}">Η παρούσα έκθεση άρχισε να συντάσσεται την ${v("doc_start")} ώρα και περατώθηκε την ${v("doc_end")} ώρα.</p>
+        if (parav === "ΝΑΙ") body += `<p style="${pStyle}">&nbsp;</p><p style="${pStyle}"><b>ΕΡΩΤΗΣΗ:</b> Γνωρίζετε ότι σύμφωνα με τον Νόμο 5090/24 για την υποβολή έγκλησης απαιτείται η προσκόμιση παράβολου ύψους εκατό -#100# ευρώ.;</p><p style="${pStyle}"><b>ΑΠΟΚΡΙΣΗ:</b> Ναι το γνωρίζω και θα σας το καταθέσω εντός τριών -3- ημερών.</p>`;
+        if (copy === "YES") body += `<p style="${pStyle}">&nbsp;</p><p style="${pStyle}"><b>ΕΡΩΤΗΣΗ:</b> Επιθυμείτε αντίγραφο της παρούσας έγκλησης κατ’ εφαρμογή του άρθρου 58 παρ. 1 Ν.4478/2017;</p><p style="${pStyle}"><b>ΑΠΟΚΡΙΣΗ:</b> Ναι, επιθυμώ.</p>`;
+        else if (copy === "NO") body += `<p style="${pStyle}">&nbsp;</p><p style="${pStyle}"><b>ΕΡΩΤΗΣΗ:</b> Επιθυμείτε αντίγραφο της παρούσας έγκλησης κατ’ εφαρμογή του άρθρου 58 παρ. 1 Ν.4478/2017;</p><p style="${pStyle}"><b>ΑΠΟΚΡΙΣΗ:</b> Όχι, δεν επιθυμώ.</p>`;
+        
+        body += `<p style="${pStyle}">Κάτι άλλο δεν έχω να προσθέσω και υπογράφω.</p><p style="${pStyle}">&nbsp;</p>
+        <p style="${pStyle}">Η παρούσα έκθεση άρχισε να συντάσσεται την ${d.v("doc_start")} ώρα και περατώθηκε την ${d.v("doc_end")} ώρα.</p>
         <p style="${pStyle}">Ενημερώθηκε ότι μπορεί να λαμβάνει εγκαίρως γνώση των εγγράφων της δίκης, τα οποία επιδίδονται και με ηλεκτρονικά μέσα σύμφωνα με τις παρ. 1 και 4 του άρθρου 155 Κ.Π.Δ.</p>
-        <p style="${pStyle}">Για πιστοποίηση συντάχθηκε η παρούσα έκθεση, η οποία αφού πρώτα αναγνώστηκε και βεβαιώθηκε από όλους του παριστάμενους, υπογράφεται ως ακολούθως:</p>
-        <p style="${pStyle}">&nbsp;</p>
-        <table style="width: 100%; font-family: 'Times New Roman'; font-size: 12pt; text-align: center; margin-top: 0cm; margin-bottom: 0cm; padding: 0cm;" border="0"><tr><td style="width: 33%;">${a_sign}</td><td style="width: 33%;">Ο Β’ Ανακριτικός Υπάλληλος</td><td style="width: 33%;">Ο Ανακριτικός Υπάλληλος</td></tr></table>`;
-        downloadWordDocument("<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>Ένορκη</title></head><body>" + body + "</body></html>", `ΕΚΘΕΣΗ_ΕΝΟΡΚΗ_ΜΑΡΤΥΡΑ_${v("surname")}.doc`);
+        <p style="${pStyle}">Για πιστοποίηση συντάχθηκε η παρούσα έκθεση, η οποία αφού πρώτα αναγνώστηκε και βεβαιώθηκε υπογράφεται ως ακολούθως:</p>
+        ${sigBlock(d.a_sign, "Ο Β’ Ανακριτικός Υπάλληλος", "Ο Ανακριτικός Υπάλληλος")}`;
+        makeDoc("Ένορκη", "ΕΚΘΕΣΗ ΕΝΟΡΚΗΣ ΕΞΕΤΑΣΗΣ ΜΑΡΤΥΡΑ (Κ.Π.Δ.)", body, `ΕΚΘΕΣΗ_ΕΝΟΡΚΗ_ΜΑΡΤΥΡΑ_${d.v("surname")}.doc`);
     }
 
+    // 2. ΕΝΔΟΟΙΚΟΓΕΝΕΙΑΚΗ
     function exportToWordNoOath() {
-        let v = id => document.getElementById(id).value.trim(); 
-        let gender = document.getElementById("gender").value; 
-        let anakr = document.getElementById("doc_anakr").value; let banakr = document.getElementById("doc_banakr").value;
-        let relation = document.getElementById("doc_relation_dv").value; 
-        let a_o = (gender === 'M') ? "ο" : "η"; let a_os = (gender === 'M') ? "ο οποίος" : "η οποία"; let a_tou = (gender === 'M') ? "του" : "της"; let a_exet = (gender === 'M') ? "εξεταζόμενος" : "εξεταζόμενη"; let a_sign = (gender === 'M') ? "Ο Εξετασθείς" : "Η Εξετασθείσα";
+        let d = getD(); let rel = d.v("doc_relation_dv"); let copy = d.v("doc_copy_dv"); let parav = d.v("doc_paravolo_dv");
+        let body = `<p style="${pStyle}">Στην Ασπροβάλτα, σήμερα την ${d.dateStr} και ώρα ${d.v("doc_start")} ενώπιον εμού του ${d.anakr} του Α.T. Βόλβης, παρισταμένου και του ${d.banakr} της ίδιας υπηρεσίας, που προσλήφθηκε ως Β' Ανακριτικός Υπάλληλος, εμφανίσθηκε ${d.a_o} κατωτέρω μάρτυρας, ${d.a_os}, αφού ερωτήθηκε για την ταυτότητά ${d.a_tou} κλπ., απάντησε ότι ονομάζεται ${d.prof} και ότι ${rel}.</p>
+        <p style="${pStyle}">Έπειτα ${d.a_o} ${d.a_exet}, ως μέλος οικογένειας σε υπόθεση ενδοοικογενειακής βίας, εξετάζεται χωρίς όρκο δυνάμει του άρθρου 19 παρ. 1 Ν.3500/2006 ως ακολούθως:</p><p style="${pStyle}">&nbsp;</p>
+        <p style="${pStyle}"><b>ΕΡΩΤΗΣΗ:</b> Τι προσήλθατε να καταθέσετε στο Α.Τ. Βόλβης;</p>${formatTextToParagraphs("<b>ΑΠΟΚΡΙΣΗ:</b> " + d.v("dv_q_main"))}`;
         
-        var body = `
-        <p style="text-align: center; font-weight: bold; text-decoration: underline; font-family: 'Times New Roman'; font-size: 14pt; line-height: 115%; margin: 0cm 0cm 6pt 0cm; padding: 0cm;">ΕΚΘΕΣΗ ΕΞΕΤΑΣΗΣ ΜΑΡΤΥΡΑ ΧΩΡΙΣ ΟΡΚΟ</p>
-        <p style="${pStyle}">Στην Ασπροβάλτα, σήμερα την ${v("doc_date")} του μήνα ${v("doc_month")} του έτους ${v("doc_year")} ημέρα της εβδομάδας ${v("doc_day")} και ώρα ${v("doc_start")} ενώπιον εμού του ${anakr} του Α.T. Βόλβης, παρισταμένου και του ${banakr} της ίδιας υπηρεσίας, που προσλήφθηκε ως Β' Ανακριτικός Υπάλληλος, εμφανίσθηκε ${a_o} κατωτέρω μάρτυρας, ${a_os}, αφού ερωτήθηκε για την ταυτότητά ${a_tou} κλπ., απάντησε ότι ονομάζεται ${getProfileText()} και ότι ${relation}.</p>
-        <p style="${pStyle}">Έπειτα ${a_o} ${a_exet}, ως μέλος οικογένειας σε υπόθεση ενδοοικογενειακής βίας, εξετάζεται χωρίς όρκο δυνάμει του άρθρου 19 παρ. 1 Ν.3500/2006 ως ακολούθως:</p>
-        <p style="${pStyle}">&nbsp;</p>
-        ${buildWitnessTestimonyText(true)}
-        <p style="${pStyle}">&nbsp;</p>
-        <p style="${pStyle}">Η παρούσα έκθεση άρχισε να συντάσσεται την ${v("doc_start")} ώρα και περατώθηκε την ${v("doc_end")} ώρα.</p>
+        dvQuestions.forEach((q, i) => {
+            let ans = d.v("dv_q_" + i);
+            if (ans) body += `<p style="${pStyle}"><b>ΕΡΩΤΗΣΗ:</b> ${q}</p>${formatTextToParagraphs("<b>ΑΠΟΚΡΙΣΗ:</b> " + ans)}`;
+        });
+        if (d.v("dv_q_last")) body += `<p style="${pStyle}"><b>ΕΡΩΤΗΣΗ:</b> Έχετε να προσθέσετε κάτι άλλο;</p>${formatTextToParagraphs("<b>ΑΠΟΚΡΙΣΗ:</b> " + d.v("dv_q_last"))}`;
+        
+        if (parav === "YES_3DAYS") body += `<p style="${pStyle}">&nbsp;</p><p style="${pStyle}"><b>ΕΡΩΤΗΣΗ:</b> Γνωρίζεις ότι για την άσκηση της ποινικής δίωξης αναφορικά με τα κατ' έγκληση διωκόμενα αδικήματα που περιγράφεις απαιτείται η προσκόμιση παραβόλου;</p><p style="${pStyle}"><b>ΑΠΟΚΡΙΣΗ:</b> Ναι το γνωρίζω και θα το προσκομίσω εντός 3 ημερών.</p>`;
+        else if (parav === "ONLY_EX_OFFICIO") body += `<p style="${pStyle}">&nbsp;</p><p style="${pStyle}"><b>ΕΡΩΤΗΣΗ:</b> Γνωρίζεις ότι για την άσκηση της ποινικής δίωξης αναφορικά με τα κατ' έγκληση διωκόμενα αδικήματα που περιγράφεις απαιτείται η προσκόμιση παραβόλου;</p><p style="${pStyle}"><b>ΑΠΟΚΡΙΣΗ:</b> Επιθυμώ την ποινική δίωξη του δράστη μόνο για τα αυτεπάγγελτα αδικήματα εις βάρος μου.</p>`;
+        
+        if (copy === "YES") body += `<p style="${pStyle}">&nbsp;</p><p style="${pStyle}"><b>ΕΡΩΤΗΣΗ:</b> Επιθυμείτε αντίγραφο της παρούσας έγκλησης κατ’ εφαρμογή του άρθρου 58 παρ. 1 Ν.4478/2017;</p><p style="${pStyle}"><b>ΑΠΟΚΡΙΣΗ:</b> Ναι, επιθυμώ.</p>`;
+        else if (copy === "NO") body += `<p style="${pStyle}">&nbsp;</p><p style="${pStyle}"><b>ΕΡΩΤΗΣΗ:</b> Επιθυμείτε αντίγραφο της παρούσας έγκλησης κατ’ εφαρμογή του άρθρου 58 παρ. 1 Ν.4478/2017;</p><p style="${pStyle}"><b>ΑΠΟΚΡΙΣΗ:</b> Όχι, δεν επιθυμώ.</p>`;
+        
+        body += `<p style="${pStyle}">Η παρούσα έκθεση άρχισε να συντάσσεται την ${d.v("doc_start")} ώρα και περατώθηκε την ${d.v("doc_end")} ώρα.</p>
         <p style="${pStyle}">Ενημερώθηκε ότι μπορεί να λαμβάνει εγκαίρως γνώση των εγγράφων της δίκης, τα οποία επιδίδονται και με ηλεκτρονικά μέσα σύμφωνα με τις παρ. 1 και 4 του άρθρου 155 Κ.Π.Δ.</p>
         <p style="${pStyle}">Για πιστοποίηση συντάχθηκε η παρούσα έκθεση, η οποία αφού πρώτα αναγνώστηκε και βεβαιώθηκε από όλους του παριστάμενους, υπογράφεται ως ακολούθως:</p>
-        <p style="${pStyle}">&nbsp;</p>
-        <table style="width: 100%; font-family: 'Times New Roman'; font-size: 12pt; text-align: center; margin-top: 0cm; margin-bottom: 0cm; padding: 0cm;" border="0"><tr><td style="width: 33%;">${a_sign}</td><td style="width: 33%;">Ο Β’ Ανακριτικός Υπάλληλος</td><td style="width: 33%;">Ο Ανακριτικός Υπάλληλος</td></tr></table>`;
-        downloadWordDocument("<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>Χωρίς Όρκο</title></head><body>" + body + "</body></html>", `ΕΚΘΕΣΗ_ΧΩΡΙΣ_ΟΡΚΟ_ΕΝΔΟΟΙΚΟΓΕΝΕΙΑΚΗ_${v("surname")}.doc`);
+        ${sigBlock(d.a_sign, "Ο Β’ Ανακριτικός Υπάλληλος", "Ο Ανακριτικός Υπάλληλος")}`;
+        makeDoc("Χωρίς Όρκο", "ΕΚΘΕΣΗ ΕΞΕΤΑΣΗΣ ΜΑΡΤΥΡΑ ΧΩΡΙΣ ΟΡΚΟ", body, `ΕΚΘΕΣΗ_ΧΩΡΙΣ_ΟΡΚΟ_${d.v("surname")}.doc`);
     }
 
+    // 3. ΠΡΟΚΑΤΑΡΚΤΙΚΗ - ΔΙΚΑΙΩΜΑΤΑ
     function exportProkRights() {
-        let v = id => document.getElementById(id).value.trim(); 
-        let gender = document.getElementById("gender").value; 
-        let anakr = document.getElementById("doc_anakr").value; let banakr = document.getElementById("doc_banakr").value;
-        let a_o = (gender === 'M') ? "ο" : "η"; let a_tou = (gender === 'M') ? "του" : "της"; let a_ton = (gender === 'M') ? "τον" : "την"; let a_auton = (gender === 'M') ? "αυτόν" : "αυτήν";
-        let a_sign = (gender === 'M') ? "Ο λαβών γνώση Ύποπτος" : "Η λαβούσα γνώση Ύποπτη";
-        let abm = v("prok_abm") || "... (συμπληρώστε ΑΒΜ/Παραγγελία) ...";
-
-        let body = `
-        <p style="text-align: center; font-weight: bold; font-family: 'Times New Roman'; font-size: 14pt; line-height: 115%; margin: 0cm 0cm 6pt 0cm; padding: 0cm;">ΕΚΘΕΣΗ ΓΝΩΣΤΟΠΟΙΗΣΗΣ ΔΙΚΑΙΩΜΑΤΩΝ ΣΕ ΥΠΟΠΤΟ ΤΕΛΕΣΗΣ ΑΞΙΟΠΟΙΝΗΣ ΠΡΑΞΗΣ</p>
-        <p style="${pStyle}">Στην Ασπροβάλτα σήμερα την ${v("doc_date")} του μήνα ${v("doc_month")} του έτους ${v("doc_year")}, ημέρα της εβδομάδας ${v("doc_day")} και ώρα ${v("doc_start")}΄, ενώπιον εμού του ${anakr} υπηρετούντος στο Αστυνομικό Τμήμα Βόλβης Θεσσαλονίκης, παρισταμένου και του ${banakr} της ιδίας Υπηρεσίας προσληφθείς ως Β’ Ανακριτικού Υπαλλήλου, προσκλήθηκε ${a_o} κατωτέρω σημειούμενος ύποπτος, που ονομάζεται ${getProfileText()}, στ${a_ton} οποί${a_o} γνωστοποιήσαμε ότι εξετάζεται ανωμοτί σε πταισματική/πλημμεληματική/κακουργηματική πράξη, κατόπιν της ${abm}, και εξηγήσαμε σαφώς σ’ ${a_auton}, βάσει του άρθρου 244 του Κ.Π.Δ. όλα τα εκ του άρθρου 104 του Κ.Π.Δ. δικαιώματά ${a_tou} και αναλυτικότερα:</p>
-        <p style="${pStyle}">&nbsp;</p>
-        <p style="${pStyle}"><b>1.</b> Έχει το δικαίωμα να παρίσταται με συνήγορο. Σε καμία περίπτωση δεν μπορεί να απαγορευθεί η επικοινωνία του υπόπτου με τον συνήγορό του.</p>
+        let d = getD(); let abm = d.v("prok_abm") || "... (συμπληρώστε ΑΒΜ/Παραγγελία) ...";
+        let body = `<p style="${pStyle}">Στην Ασπροβάλτα σήμερα την ${d.dateStr} και ώρα ${d.v("doc_start")}΄, ενώπιον εμού του ${d.anakr} υπηρετούντος στο Αστυνομικό Τμήμα Βόλβης Θεσσαλονίκης, παρισταμένου και του ${d.banakr} της ιδίας Υπηρεσίας προσληφθείς ως Β’ Ανακριτικού Υπαλλήλου, προσκλήθηκε ${d.a_o} κατωτέρω σημειούμενος ύποπτος, που ονομάζεται ${d.prof}, στ${d.a_ton} οποί${d.a_o} γνωστοποιήσαμε ότι εξετάζεται ανωμοτί σε πταισματική/πλημμεληματική/κακουργηματική πράξη, κατόπιν της ${abm}, και εξηγήσαμε σαφώς σ’ ${d.a_auton}, βάσει του άρθρου 244 του Κ.Π.Δ. όλα τα εκ του άρθρου 104 του Κ.Π.Δ. δικαιώματά ${d.a_tou} και αναλυτικότερα:</p>
+        <p style="${pStyle}">&nbsp;</p><p style="${pStyle}"><b>1.</b> Έχει το δικαίωμα να παρίσταται με συνήγορο. Σε καμία περίπτωση δεν μπορεί να απαγορευθεί η επικοινωνία του υπόπτου με τον συνήγορό του.</p>
         <p style="${pStyle}"><b>2.</b> Έχει το δικαίωμα να αρνηθεί να απαντήσει (δικαίωμα σιωπής) και να μην αυτοενοχοποιηθεί.</p>
         <p style="${pStyle}"><b>3.</b> Έχει το δικαίωμα να ζητήσει προθεσμία τουλάχιστον σαράντα οκτώ (48) ωρών για να δώσει τις εξηγήσεις του, καθώς και να ζητήσει αντίγραφα της δικογραφίας με δική του δαπάνη.</p>
         <p style="${pStyle}"><b>4.</b> Έχει το δικαίωμα, αντί προφορικών εξηγήσεων, να υποβάλει έγγραφο υπόμνημα.</p>
-        <p style="${pStyle}">&nbsp;</p>
-        <p style="${pStyle}">Για πίστωση συντάχθηκε η παρούσα έκθεση, η οποία αφού αναγνώσθηκε και βεβαιώθηκε, υπογράφεται ως ακολούθως :</p>
-        <p style="${pStyle}">&nbsp;</p>
-        <table style="width: 100%; font-family: 'Times New Roman'; font-size: 12pt; text-align: center; margin-top: 0cm; margin-bottom: 0cm; padding: 0cm;" border="0">
-            <tr><td style="width: 33%;">${a_sign}</td><td style="width: 33%;">Ο Β’ Ανακριτικός Υπάλληλος</td><td style="width: 33%;">Ο Ανακριτικός Υπάλληλος</td></tr>
-        </table>`;
-        downloadWordDocument("<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>Δικαιώματα_Υπόπτου</title></head><body>" + body + "</body></html>", `1_ΔΙΚΑΙΩΜΑΤΑ_ΥΠΟΠΤΟΥ_${v("surname")}.doc`);
+        <p style="${pStyle}">&nbsp;</p><p style="${pStyle}">Για πίστωση συντάχθηκε η παρούσα έκθεση, η οποία αφού αναγνώσθηκε και βεβαιώθηκε, υπογράφεται ως ακολούθως :</p>
+        ${sigBlock(d.v("gender")==='M'?"Ο λαβών γνώση Ύποπτος":"Η λαβούσα γνώση Ύποπτη", "Ο Β’ Ανακριτικός Υπάλληλος", "Ο Ανακριτικός Υπάλληλος")}`;
+        makeDoc("Δικαιώματα Ύποπτου", "ΕΚΘΕΣΗ ΓΝΩΣΤΟΠΟΙΗΣΗΣ ΔΙΚΑΙΩΜΑΤΩΝ ΣΕ ΥΠΟΠΤΟ ΤΕΛΕΣΗΣ ΑΞΙΟΠΟΙΝΗΣ ΠΡΑΞΗΣ", body, `1_ΔΙΚΑΙΩΜΑΤΑ_ΥΠΟΠΤΟΥ_${d.v("surname")}.doc`);
     }
 
+    // 4. ΠΡΟΚΑΤΑΡΚΤΙΚΗ - ΧΩΡΙΣ ΠΡΟΘΕΣΜΙΑ
     function exportProkNoDeadline() {
-        let v = id => document.getElementById(id).value.trim(); 
-        let gender = document.getElementById("gender").value; 
-        let anakr = document.getElementById("doc_anakr").value; let banakr = document.getElementById("doc_banakr").value;
-        let a_o = (gender === 'M') ? "ο" : "η"; let a_os = (gender === 'M') ? "ο οποίος" : "η οποία"; let a_tou = (gender === 'M') ? "του" : "της"; let a_exet = (gender === 'M') ? "εξεταζόμενος" : "εξεταζόμενη"; let a_sign = (gender === 'M') ? "Ο Εξετασθείς Ύποπτος" : "Η Εξετασθείσα Ύποπτη";
-        let abm = v("prok_abm") || "... (συμπληρώστε ΑΒΜ/Παραγγελία) ...";
-        let pleaAns = formatTextToParagraphs("<b>ΑΠΟΚΡΙΣΗ:</b> " + v("prok_plea")); 
-
-        var body = `
-        <p style="text-align: center; font-weight: bold; text-decoration: underline; font-family: 'Times New Roman'; font-size: 14pt; line-height: 115%; margin: 0cm 0cm 6pt 0cm; padding: 0cm;">ΕΚΘΕΣΗ ΕΞΕΤΑΣΗΣ ΥΠΟΠΤΟΥ ΧΩΡΙΣ ΟΡΚΟ</p>
-        <p style="${pStyle}">Στην Ασπροβάλτα, σήμερα την ${v("doc_date")} του μήνα ${v("doc_month")} του έτους ${v("doc_year")} ημέρα της εβδομάδας ${v("doc_day")} και ώρα ${v("doc_start")} ενώπιον εµού του ${anakr} του Α.T. Βόλβης, παρισταμένου και του ${banakr} της ίδιας υπηρεσίας, που προσλήφθηκε ως Β' Ανακριτικός Υπάλληλος, εμφανίσθηκε ${a_o} κατωτέρω ύποπτος, ${a_os}, αφού ερωτήθηκε για την ταυτότητά ${a_tou} κλπ., απάντησε ότι ονομάζεται ${getProfileText()}.</p>
-        <p style="${pStyle}">&nbsp;</p>
-        <p style="${pStyle}">Έπειτα ${a_o} ${a_exet}, αφού παραιτήθηκε ρητά από το δικαίωμα λήψης προθεσμίας, εξετάζεται χωρίς όρκο κατ' άρθρο 244 ΚΠΔ ως ακολούθως:</p>
-        <p style="${pStyle}">&nbsp;</p>
-        <p style="${pStyle}"><b>ΕΡΩΤΗΣΗ:</b> Τι έχεις να αναφέρεις σχετικά με τα καταγγελλόμενα σε βάρος σου, κατόπιν της ${abm};</p>
-        ${pleaAns}
-        <br>
-        <p style="${pStyle}">Η παρούσα έκθεση άρχισε να συντάσσεται την ${v("doc_start")} ώρα και περατώθηκε την ${v("doc_end")} ώρα.</p>
+        let d = getD(); let abm = d.v("prok_abm") || "... (συμπληρώστε ΑΒΜ/Παραγγελία) ...";
+        let body = `<p style="${pStyle}">Στην Ασπροβάλτα, σήμερα την ${d.dateStr} και ώρα ${d.v("doc_start")} ενώπιον εµού του ${d.anakr} του Α.T. Βόλβης, παρισταμένου και του ${d.banakr} της ίδιας υπηρεσίας, που προσλήφθηκε ως Β' Ανακριτικός Υπάλληλος, εμφανίσθηκε ${d.a_o} κατωτέρω ύποπτος, ${d.a_os}, αφού ερωτήθηκε για την ταυτότητά ${d.a_tou} κλπ., απάντησε ότι ονομάζεται ${d.prof}.</p>
+        <p style="${pStyle}">&nbsp;</p><p style="${pStyle}">Έπειτα ${d.a_o} ${d.a_exet}, αφού παραιτήθηκε ρητά από το δικαίωμα λήψης προθεσμίας, εξετάζεται χωρίς όρκο κατ' άρθρο 244 ΚΠΔ ως ακολούθως:</p>
+        <p style="${pStyle}">&nbsp;</p><p style="${pStyle}"><b>ΕΡΩΤΗΣΗ:</b> Τι έχεις να αναφέρεις σχετικά με τα καταγγελλόμενα σε βάρος σου, κατόπιν της ${abm};</p>
+        ${formatTextToParagraphs("<b>ΑΠΟΚΡΙΣΗ:</b> " + d.v("prok_plea"))}
+        <br><p style="${pStyle}">Η παρούσα έκθεση άρχισε να συντάσσεται την ${d.v("doc_start")} ώρα και περατώθηκε την ${d.v("doc_end")} ώρα.</p>
         <p style="${pStyle}">Για πιστοποίηση συντάχθηκε η παρούσα έκθεση, η οποία αφού πρώτα αναγνώστηκε και βεβαιώθηκε υπογράφεται ως ακολούθως:</p>
-        <p style="${pStyle}">&nbsp;</p>
-        <table style="width: 100%; font-family: 'Times New Roman'; font-size: 12pt; text-align: center; margin-top: 0cm; margin-bottom: 0cm; padding: 0cm;" border="0"><tr><td style="width: 33%;">${a_sign}</td><td style="width: 33%;">Ο Β’ Ανακριτικός Υπάλληλος</td><td style="width: 33%;">Ο Ανακριτικός Υπάλληλος</td></tr></table>`;
-        downloadWordDocument("<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>Ανωμοτί</title></head><body>" + body + "</body></html>", `2_ΑΝΩΜΟΤΙ_ΕΞΕΤΑΣΗ_${v("surname")}.doc`);
+        ${sigBlock(d.v("gender")==='M'?"Ο Εξετασθείς Ύποπτος":"Η Εξετασθείσα Ύποπτη", "Ο Β’ Ανακριτικός Υπάλληλος", "Ο Ανακριτικός Υπάλληλος")}`;
+        makeDoc("Ανωμοτί", "ΕΚΘΕΣΗ ΕΞΕΤΑΣΗΣ ΥΠΟΠΤΟΥ ΧΩΡΙΣ ΟΡΚΟ", body, `2_ΑΝΩΜΟΤΙ_ΕΞΕΤΑΣΗ_${d.v("surname")}.doc`);
     }
 
+    // 5. ΠΡΟΚΑΤΑΡΚΤΙΚΗ - ΧΟΡΗΓΗΣΗ ΠΡΟΘΕΣΜΙΑΣ
     function exportProkDeadline() {
-        let v = id => document.getElementById(id).value.trim(); 
-        let gender = document.getElementById("gender").value; 
-        let anakr = document.getElementById("doc_anakr").value; let banakr = document.getElementById("doc_banakr").value;
-        let a_o = (gender === 'M') ? "ο" : "η"; let a_os = (gender === 'M') ? "ο οποίος" : "η οποία"; let a_tou = (gender === 'M') ? "του" : "της"; let a_exet = (gender === 'M') ? "εξεταζόμενος" : "εξεταζόμενη"; let a_sign = (gender === 'M') ? "Ο Εξετασθείς Ύποπτος" : "Η Εξετασθείσα Ύποπτη";
-        let abm = v("prok_abm") || "... (συμπληρώστε ΑΒΜ/Παραγγελία) ...";
-        let d_date = v("prok_dead_date") || "...";
-        let d_time = v("prok_dead_time") || "...";
-
-        var body = `
-        <p style="text-align: center; font-weight: bold; text-decoration: underline; font-family: 'Times New Roman'; font-size: 14pt; line-height: 115%; margin: 0cm 0cm 6pt 0cm; padding: 0cm;">ΕΚΘΕΣΗ ΕΜΦΑΝΙΣΗΣ ΥΠΟΠΤΟΥ ΚΑΙ ΧΟΡΗΓΗΣΗΣ ΠΡΟΘΕΣΜΙΑΣ</p>
-        <p style="${pStyle}">Στην Ασπροβάλτα, σήμερα την ${v("doc_date")} του μήνα ${v("doc_month")} του έτους ${v("doc_year")} ημέρα της εβδομάδας ${v("doc_day")} και ώρα ${v("doc_start")} ενώπιον εµού του ${anakr} του Α.T. Βόλβης, παρισταμένου και του ${banakr} της ίδιας υπηρεσίας, που προσλήφθηκε ως Β' Ανακριτικός Υπάλληλος, εμφανίσθηκε ${a_o} κατωτέρω ύποπτος, ${a_os}, αφού ερωτήθηκε για την ταυτότητά ${a_tou} κλπ., απάντησε ότι ονομάζεται ${getProfileText()}.</p>
-        <p style="${pStyle}">&nbsp;</p>
-        <p style="${pStyle}">Έπειτα ${a_o} ${a_exet}, δήλωσε ότι προκειμένου να προετοιμάσει τις εξηγήσεις ${a_tou} και να συμβουλευτεί δικηγόρο, αναφορικά με την ${abm}, αιτείται τη χορήγηση προθεσμίας.</p>
-        <p style="${pStyle}">&nbsp;</p>
-        <p style="${pStyle}">Κατόπιν τούτου, χορηγήθηκε στ${gender==='M'?'ον':'ην'} ανωτέρω προθεσμία προκειμένου να προσέλθει στο Α.Τ. Βόλβης την ${d_date} και ώρα ${d_time}.</p>
-        <br>
-        <p style="${pStyle}">Η παρούσα έκθεση άρχισε να συντάσσεται την ${v("doc_start")} ώρα και περατώθηκε την ${v("doc_end")} ώρα.</p>
+        let d = getD(); let abm = d.v("prok_abm") || "... (συμπληρώστε ΑΒΜ/Παραγγελία) ...";
+        let body = `<p style="${pStyle}">Στην Ασπροβάλτα, σήμερα την ${d.dateStr} και ώρα ${d.v("doc_start")} ενώπιον εµού του ${d.anakr} του Α.T. Βόλβης, παρισταμένου και του ${d.banakr} της ίδιας υπηρεσίας, που προσλήφθηκε ως Β' Ανακριτικός Υπάλληλος, εμφανίσθηκε ${d.a_o} κατωτέρω ύποπτος, ${d.a_os}, αφού ερωτήθηκε για την ταυτότητά ${d.a_tou} κλπ., απάντησε ότι ονομάζεται ${d.prof}.</p>
+        <p style="${pStyle}">&nbsp;</p><p style="${pStyle}">Έπειτα ${d.a_o} ${d.a_exet}, δήλωσε ότι προκειμένου να προετοιμάσει τις εξηγήσεις ${d.a_tou} και να συμβουλευτεί δικηγόρο, αναφορικά με την ${abm}, αιτείται τη χορήγηση προθεσμίας.</p>
+        <p style="${pStyle}">&nbsp;</p><p style="${pStyle}">Κατόπιν τούτου, χορηγήθηκε στ${d.a_ton} ανωτέρω προθεσμία προκειμένου να προσέλθει στο Α.Τ. Βόλβης την ${d.v("prok_dead_date")} και ώρα ${d.v("prok_dead_time")}.</p>
+        <br><p style="${pStyle}">Η παρούσα έκθεση άρχισε να συντάσσεται την ${d.v("doc_start")} ώρα και περατώθηκε την ${d.v("doc_end")} ώρα.</p>
         <p style="${pStyle}">Για πιστοποίηση συντάχθηκε η παρούσα έκθεση, η οποία αφού πρώτα αναγνώστηκε και βεβαιώθηκε υπογράφεται ως ακολούθως:</p>
-        <p style="${pStyle}">&nbsp;</p>
-        <table style="width: 100%; font-family: 'Times New Roman'; font-size: 12pt; text-align: center; margin-top: 0cm; margin-bottom: 0cm; padding: 0cm;" border="0"><tr><td style="width: 33%;">${a_sign}</td><td style="width: 33%;">Ο Β’ Ανακριτικός Υπάλληλος</td><td style="width: 33%;">Ο Ανακριτικός Υπάλληλος</td></tr></table>`;
-        downloadWordDocument("<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>Προθεσμία</title></head><body>" + body + "</body></html>", `3_ΧΟΡΗΓΗΣΗ_ΠΡΟΘΕΣΜΙΑΣ_${v("surname")}.doc`);
+        ${sigBlock(d.v("gender")==='M'?"Ο Εξετασθείς Ύποπτος":"Η Εξετασθείσα Ύποπτη", "Ο Β’ Ανακριτικός Υπάλληλος", "Ο Ανακριτικός Υπάλληλος")}`;
+        makeDoc("Προθεσμία", "ΕΚΘΕΣΗ ΕΜΦΑΝΙΣΗΣ ΥΠΟΠΤΟΥ ΚΑΙ ΧΟΡΗΓΗΣΗΣ ΠΡΟΘΕΣΜΙΑΣ", body, `3_ΧΟΡΗΓΗΣΗ_ΠΡΟΘΕΣΜΙΑΣ_${d.v("surname")}.doc`);
     }
 
+    // 6. ΠΡΟΚΑΤΑΡΚΤΙΚΗ - ΜΕΤΑ ΑΠΟ ΠΡΟΘΕΣΜΙΑ
     function exportProkAfterDeadline() {
-        let v = id => document.getElementById(id).value.trim(); 
-        let gender = document.getElementById("gender").value; 
-        let anakr = document.getElementById("doc_anakr").value; let banakr = document.getElementById("doc_banakr").value;
-        let a_o = (gender === 'M') ? "ο" : "η"; let a_os = (gender === 'M') ? "ο οποίος" : "η οποία"; let a_tou = (gender === 'M') ? "του" : "της"; let a_exet = (gender === 'M') ? "εξεταζόμενος" : "εξεταζόμενη"; let a_sign = (gender === 'M') ? "Ο Εξετασθείς Ύποπτος" : "Η Εξετασθείσα Ύποπτη";
-        let abm = v("prok_abm") || "... (συμπληρώστε ΑΒΜ/Παραγγελία) ...";
-        let d_date = v("prok_dead_date") || "...";
-        let pleaAns = formatTextToParagraphs("<b>ΑΠΟΚΡΙΣΗ:</b> " + v("prok_plea")); 
-
-        var body = `
-        <p style="text-align: center; font-weight: bold; text-decoration: underline; font-family: 'Times New Roman'; font-size: 14pt; line-height: 115%; margin: 0cm 0cm 6pt 0cm; padding: 0cm;">ΕΚΘΕΣΗ ΕΞΕΤΑΣΗΣ ΥΠΟΠΤΟΥ ΧΩΡΙΣ ΟΡΚΟ (ΜΕΤΑ ΑΠΟ ΠΡΟΘΕΣΜΙΑ)</p>
-        <p style="${pStyle}">Στην Ασπροβάλτα, σήμερα την ${v("doc_date")} του μήνα ${v("doc_month")} του έτους ${v("doc_year")} ημέρα της εβδομάδας ${v("doc_day")} και ώρα ${v("doc_start")} ενώπιον εµού του ${anakr} του Α.T. Βόλβης, παρισταμένου και του ${banakr} της ίδιας υπηρεσίας, που προσλήφθηκε ως Β' Ανακριτικός Υπάλληλος, εμφανίσθηκε ${a_o} κατωτέρω ύποπτος, ${a_os}, αφού ερωτήθηκε για την ταυτότητά ${a_tou} κλπ., απάντησε ότι ονομάζεται ${getProfileText()}.</p>
-        <p style="${pStyle}">&nbsp;</p>
-        <p style="${pStyle}">Έπειτα ${a_o} ${a_exet}, μετά την προθεσμία που του χορηγήθηκε την ${d_date}, εξετάζεται χωρίς όρκο κατ' άρθρο 244 ΚΠΔ ως ακολούθως:</p>
-        <p style="${pStyle}">&nbsp;</p>
-        <p style="${pStyle}"><b>ΕΡΩΤΗΣΗ:</b> Τι έχεις να αναφέρεις σχετικά με τα καταγγελλόμενα σε βάρος σου, κατόπιν της ${abm};</p>
-        ${pleaAns}
-        <br>
-        <p style="${pStyle}">Η παρούσα έκθεση άρχισε να συντάσσεται την ${v("doc_start")} ώρα και περατώθηκε την ${v("doc_end")} ώρα.</p>
+        let d = getD(); let abm = d.v("prok_abm") || "... (συμπληρώστε ΑΒΜ/Παραγγελία) ...";
+        let body = `<p style="${pStyle}">Στην Ασπροβάλτα, σήμερα την ${d.dateStr} και ώρα ${d.v("doc_start")} ενώπιον εµού του ${d.anakr} του Α.T. Βόλβης, παρισταμένου και του ${d.banakr} της ίδιας υπηρεσίας, που προσλήφθηκε ως Β' Ανακριτικός Υπάλληλος, εμφανίσθηκε ${d.a_o} κατωτέρω ύποπτος, ${d.a_os}, αφού ερωτήθηκε για την ταυτότητά ${d.a_tou} κλπ., απάντησε ότι ονομάζεται ${d.prof}.</p>
+        <p style="${pStyle}">&nbsp;</p><p style="${pStyle}">Έπειτα ${d.a_o} ${d.a_exet}, μετά την προθεσμία που του χορηγήθηκε την ${d.v("prok_dead_date")}, εξετάζεται χωρίς όρκο κατ' άρθρο 244 ΚΠΔ ως ακολούθως:</p>
+        <p style="${pStyle}">&nbsp;</p><p style="${pStyle}"><b>ΕΡΩΤΗΣΗ:</b> Τι έχεις να αναφέρεις σχετικά με τα καταγγελλόμενα σε βάρος σου, κατόπιν της ${abm};</p>
+        ${formatTextToParagraphs("<b>ΑΠΟΚΡΙΣΗ:</b> " + d.v("prok_plea"))}
+        <br><p style="${pStyle}">Η παρούσα έκθεση άρχισε να συντάσσεται την ${d.v("doc_start")} ώρα και περατώθηκε την ${d.v("doc_end")} ώρα.</p>
         <p style="${pStyle}">Για πιστοποίηση συντάχθηκε η παρούσα έκθεση, η οποία αφού πρώτα αναγνώστηκε και βεβαιώθηκε υπογράφεται ως ακολούθως:</p>
-        <p style="${pStyle}">&nbsp;</p>
-        <table style="width: 100%; font-family: 'Times New Roman'; font-size: 12pt; text-align: center; margin-top: 0cm; margin-bottom: 0cm; padding: 0cm;" border="0"><tr><td style="width: 33%;">${a_sign}</td><td style="width: 33%;">Ο Β’ Ανακριτικός Υπάλληλος</td><td style="width: 33%;">Ο Ανακριτικός Υπάλληλος</td></tr></table>`;
-        downloadWordDocument("<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>Ανωμοτί Μετά Προθεσμία</title></head><body>" + body + "</body></html>", `4_ΑΝΩΜΟΤΙ_ΜΕΤΑ_ΠΡΟΘΕΣΜΙΑ_${v("surname")}.doc`);
+        ${sigBlock(d.v("gender")==='M'?"Ο Εξετασθείς Ύποπτος":"Η Εξετασθείσα Ύποπτη", "Ο Β’ Ανακριτικός Υπάλληλος", "Ο Ανακριτικός Υπάλληλος")}`;
+        makeDoc("Ανωμοτί", "ΕΚΘΕΣΗ ΕΞΕΤΑΣΗΣ ΥΠΟΠΤΟΥ ΧΩΡΙΣ ΟΡΚΟ (ΜΕΤΑ ΑΠΟ ΠΡΟΘΕΣΜΙΑ)", body, `4_ΑΝΩΜΟΤΙ_ΜΕΤΑ_ΠΡΟΘΕΣΜΙΑ_${d.v("surname")}.doc`);
     }
 
+    // 7. ΠΡΟΚΑΤΑΡΚΤΙΚΗ - ΥΠΟΜΝΗΜΑ
     function exportProkMemo() {
-        let v = id => document.getElementById(id).value.trim(); 
-        let gender = document.getElementById("gender").value; 
-        let anakr = document.getElementById("doc_anakr").value; let banakr = document.getElementById("doc_banakr").value;
-        let a_o = (gender === 'M') ? "ο" : "η"; let a_os = (gender === 'M') ? "ο οποίος" : "η οποία"; let a_tou = (gender === 'M') ? "του" : "της"; let a_exet = (gender === 'M') ? "εξεταζόμενος" : "εξεταζόμενη"; let a_sign = (gender === 'M') ? "Ο Εγχειρίσας Ύποπτος" : "Η Εγχειρίσασα Ύποπτη";
-        let abm = v("prok_abm") || "... (συμπληρώστε ΑΒΜ/Παραγγελία) ...";
-        let pages = v("prok_pages") || "...";
-
-        var body = `
-        <p style="text-align: center; font-weight: bold; text-decoration: underline; font-family: 'Times New Roman'; font-size: 14pt; line-height: 115%; margin: 0cm 0cm 6pt 0cm; padding: 0cm;">ΕΚΘΕΣΗ ΕΓΧΕΙΡΙΣΕΩΣ ΥΠΟΜΝΗΜΑΤΟΣ ΕΞΗΓΗΣΕΩΝ</p>
-        <p style="${pStyle}">Στην Ασπροβάλτα, σήμερα την ${v("doc_date")} του μήνα ${v("doc_month")} του έτους ${v("doc_year")} ημέρα της εβδομάδας ${v("doc_day")} και ώρα ${v("doc_start")} ενώπιον εµού του ${anakr} του Α.T. Βόλβης, παρισταμένου και του ${banakr} της ίδιας υπηρεσίας, που προσλήφθηκε ως Β' Ανακριτικός Υπάλληλος, εμφανίσθηκε ${a_o} κατωτέρω ύποπτος, ${a_os}, αφού ερωτήθηκε για την ταυτότητά ${a_tou} κλπ., απάντησε ότι ονομάζεται ${getProfileText()}.</p>
-        <p style="${pStyle}">&nbsp;</p>
-        <p style="${pStyle}">Έπειτα ${a_o} ανωτέρω, ενεχείρισε σε εμάς, αντί προφορικών εξηγήσεων, έγγραφο υπόμνημα αποτελούμενο από ${pages} σελίδες, προς απάντηση της ${abm}, το οποίο και επισυνάπτεται στην παρούσα δικογραφία.</p>
-        <br>
-        <p style="${pStyle}">Η παρούσα έκθεση άρχισε να συντάσσεται την ${v("doc_start")} ώρα και περατώθηκε την ${v("doc_end")} ώρα.</p>
+        let d = getD(); let abm = d.v("prok_abm") || "... (συμπληρώστε ΑΒΜ/Παραγγελία) ...";
+        let body = `<p style="${pStyle}">Στην Ασπροβάλτα, σήμερα την ${d.dateStr} και ώρα ${d.v("doc_start")} ενώπιον εµού του ${d.anakr} του Α.T. Βόλβης, παρισταμένου και του ${d.banakr} της ίδιας υπηρεσίας, που προσλήφθηκε ως Β' Ανακριτικός Υπάλληλος, εμφανίσθηκε ${d.a_o} κατωτέρω ύποπτος, ${d.a_os}, αφού ερωτήθηκε για την ταυτότητά ${d.a_tou} κλπ., απάντησε ότι ονομάζεται ${d.prof}.</p>
+        <p style="${pStyle}">&nbsp;</p><p style="${pStyle}">Έπειτα ${d.a_o} ανωτέρω, ενεχείρισε σε εμάς, αντί προφορικών εξηγήσεων, έγγραφο υπόμνημα αποτελούμενο από ${d.v("prok_pages")} σελίδες, προς απάντηση της ${abm}, το οποίο και επισυνάπτεται στην παρούσα δικογραφία.</p>
+        <br><p style="${pStyle}">Η παρούσα έκθεση άρχισε να συντάσσεται την ${d.v("doc_start")} ώρα και περατώθηκε την ${d.v("doc_end")} ώρα.</p>
         <p style="${pStyle}">Για πιστοποίηση συντάχθηκε η παρούσα έκθεση, η οποία αφού πρώτα αναγνώστηκε και βεβαιώθηκε υπογράφεται ως ακολούθως:</p>
-        <p style="${pStyle}">&nbsp;</p>
-        <table style="width: 100%; font-family: 'Times New Roman'; font-size: 12pt; text-align: center; margin-top: 0cm; margin-bottom: 0cm; padding: 0cm;" border="0"><tr><td style="width: 33%;">${a_sign}</td><td style="width: 33%;">Ο Β’ Ανακριτικός Υπάλληλος</td><td style="width: 33%;">Ο Ανακριτικός Υπάλληλος</td></tr></table>`;
-        downloadWordDocument("<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>Υπόμνημα</title></head><body>" + body + "</body></html>", `5_ΥΠΟΜΝΗΜΑ_${v("surname")}.doc`);
+        ${sigBlock(d.v("gender")==='M'?"Ο Εγχειρίσας Ύποπτος":"Η Εγχειρίσασα Ύποπτη", "Ο Β’ Ανακριτικός Υπάλληλος", "Ο Ανακριτικός Υπάλληλος")}`;
+        makeDoc("Υπόμνημα", "ΕΚΘΕΣΗ ΕΓΧΕΙΡΙΣΕΩΣ ΥΠΟΜΝΗΜΑΤΟΣ ΕΞΗΓΗΣΕΩΝ", body, `5_ΥΠΟΜΝΗΜΑ_${d.v("surname")}.doc`);
     }
 
+    // 8. ΣΥΛΛΗΨΗ
     function exportArrest() {
-        let v = id => document.getElementById(id).value.trim(); 
-        let gender = document.getElementById("gender").value; 
-        let anakr = document.getElementById("doc_anakr").value; let banakr = document.getElementById("doc_banakr").value;
-        let a_o = (gender === 'M') ? "ο" : "η"; let a_tou = (gender === 'M') ? "του" : "της"; let a_ton = (gender === 'M') ? "τον" : "την"; let a_auton = (gender === 'M') ? "αυτόν" : "αυτήν"; let a_sign = (gender === 'M') ? "Ο Συλληφθείς" : "Η Συλληφθείσα";
-
-        let str_start = v("arr_start"); let str_end = v("arr_end");
-        let arr_date = v("arr_street_date"); let arr_time = v("arr_street_time"); let arr_loc = v("arr_loc"); let arr_officer = v("arr_officer");
-        let shortCharge = v("apologia_charge_short"); let arr_reason = v("arr_reason").replace(/[\n\r]+/g, " ");
-        
-        let sentence = "";
-        if (arr_reason !== "") { sentence = `διότι ${arr_reason} για ${shortCharge}`; } 
-        else if (shortCharge !== "") { sentence = `για ${shortCharge}`; } 
-        else { sentence = `για ... (Συμπληρώστε αιτιολογία)`; }
-
-        let officerText = arr_officer ? `από τον ${arr_officer} που ${a_ton} συνέλαβε` : `που συνελήφθη`;
-        let dateText = arr_date ? ` την ${arr_date}` : ``;
-        let timeText = arr_time ? ` και περί ώρα ${arr_time}` : ``;
-        let locText = arr_loc ? ` ${arr_loc}` : ``;
-
-        var body = `
-        <p style="text-align: center; font-weight: bold; text-decoration: underline; font-family: 'Times New Roman'; font-size: 14pt; line-height: 115%; margin: 0cm 0cm 6pt 0cm; padding: 0cm;">Ε Κ Θ Ε Σ Η &nbsp;&nbsp;&nbsp; Σ Υ Λ Λ Η Ψ Η Σ</p>
-        <p style="${pStyle}">Στην Ασπροβάλτα σήμερα την ${v("doc_date")} του μήνα ${v("doc_month")} του έτους ${v("doc_year")}, ημέρα της εβδομάδας ${v("doc_day")} και ώρα ${str_start} ενώπιον εμού του ${anakr} υπηρετούντος στο Α.Τ. Βόλβης, παρισταμένου και του ${banakr} της ιδίας Υπηρεσίας, που προσλήφθηκε ως Β΄ Ανακριτικός Υπάλληλος, κατοίκων ομοίως, οδηγήθηκε στο Κατάστημα της Υπηρεσίας μας, Αστυνομικό Τμήμα Βόλβης, ${a_o} ${getProfileText()}, ${officerText}${dateText}${timeText}${locText}, ${sentence}.</p>
-        <p style="${pStyle}">Αφού ενημέρωσα ${a_auton} για τα προβλεπόμενα στο άρθρο 95 του Κ.Π.Δ. δικαιώματά του, παρείχα το προβλεπόμενο στο άρθρο 96 του ΚΠΔ έγγραφο σε κατάλληλη γλώσσα, εξέτασα ${a_auton} και πείσθηκα ότι ουδεμία υπάρχει ως προς την ταυτότητά ${a_tou} αμφιβολία, διέταξα την προσαγωγή και παραπομπή ${a_tou}, στον κ. Εισαγγελέα Πλημμελειοδικών Θεσσαλονίκης και την παράδοσή ${a_tou} με την παρούσα έκθεση.</p>
-        <p style="${pStyle}">Η παρούσα άρχισε να συντάσσεται την ${str_start} ώρα και περατώθηκε την ${str_end} ώρα.</p>
+        let d = getD(); let shortC = d.v("apologia_charge_short"); let reason = d.v("arr_reason").replace(/[\n\r]+/g, " ");
+        let sentence = reason !== "" ? `διότι ${reason} για ${shortC}` : (shortC !== "" ? `για ${shortC}` : `για ... (Συμπληρώστε αιτιολογία)`);
+        let arrDT = (d.v("arr_street_date") ? ` την ${d.v("arr_street_date")}` : ``) + (d.v("arr_street_time") ? ` και περί ώρα ${d.v("arr_street_time")}` : ``);
+        let locText = d.v("arr_loc") ? ` ${d.v("arr_loc")}` : ``;
+        let body = `<p style="${pStyle}">Στην Ασπροβάλτα σήμερα την ${d.dateStr} και ώρα ${d.v("arr_start")} ενώπιον εμού του ${d.anakr} υπηρετούντος στο Α.Τ. Βόλβης, παρισταμένου και του ${d.banakr} της ιδίας Υπηρεσίας, που προσλήφθηκε ως Β΄ Ανακριτικός Υπάλληλος, κατοίκων ομοίως, οδηγήθηκε στο Κατάστημα της Υπηρεσίας μας, Αστυνομικό Τμήμα Βόλβης, ${d.a_o} ${d.prof}, ${d.v("arr_officer") ? `από τον ${d.v("arr_officer")} που ${d.a_ton} συνέλαβε` : `που συνελήφθη`}${arrDT}${locText}, ${sentence}.</p>
+        <p style="${pStyle}">Αφού ενημέρωσα ${d.a_auton} για τα προβλεπόμενα στο άρθρο 95 του Κ.Π.Δ. δικαιώματά του, παρείχα το προβλεπόμενο στο άρθρο 96 του ΚΠΔ έγγραφο σε κατάλληλη γλώσσα, εξέτασα ${d.a_auton} και πείσθηκα ότι ουδεμία υπάρχει ως προς την ταυτότητά ${d.a_tou} αμφιβολία, διέταξα την προσαγωγή και παραπομπή ${d.a_tou}, στον κ. Εισαγγελέα Πλημμελειοδικών Θεσσαλονίκης και την παράδοσή ${d.a_tou} με την παρούσα έκθεση.</p>
+        <p style="${pStyle}">Η παρούσα άρχισε να συντάσσεται την ${d.v("arr_start")} ώρα και περατώθηκε την ${d.v("arr_end")} ώρα.</p>
         <p style="${pStyle}">Για πίστωση συντάχθηκε η παρούσα έκθεση, η οποία αφού αναγνώσθηκε και βεβαιώθηκε, υπογράφεται ως ακολούθως :</p>
-        <p style="${pStyle}">&nbsp;</p>
-        <table style="width: 100%; font-family: 'Times New Roman'; font-size: 12pt; text-align: center; margin-top: 0cm; margin-bottom: 0cm; padding: 0cm;" border="0">
-            <tr><td style="width: 25%;">${a_sign}</td><td style="width: 25%;">Ο Συλλαβών</td><td style="width: 25%;">Ο Β΄ Ανακριτ. Υπάλλ.</td><td style="width: 25%;">Ο Ανακριτ. Υπάλληλος</td></tr>
-        </table>`;
-        downloadWordDocument("<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>Σύλληψη</title></head><body>" + body + "</body></html>", `1_ΕΚΘΕΣΗ_ΣΥΛΛΗΨΗΣ_${v("surname")}.doc`);
+        <table style="width: 100%; font-family: 'Times New Roman'; font-size: 12pt; text-align: center; margin-top: 0cm; margin-bottom: 0cm; padding: 0cm;" border="0"><tr><td style="width: 25%;">${d.v("gender")==='M'?"Ο Συλληφθείς":"Η Συλληφθείσα"}</td><td style="width: 25%;">Ο Συλλαβών</td><td style="width: 25%;">Ο Β΄ Ανακριτ. Υπάλλ.</td><td style="width: 25%;">Ο Ανακριτ. Υπάλληλος</td></tr></table>`;
+        makeDoc("Σύλληψη", "Ε Κ Θ Ε Σ Η &nbsp;&nbsp;&nbsp; Σ Υ Λ Λ Η Ψ Η Σ", body, `1_ΕΚΘΕΣΗ_ΣΥΛΛΗΨΗΣ_${d.v("surname")}.doc`);
     }
 
+    // 9. ΔΙΚΑΙΩΜΑΤΑ ΣΥΛΛΗΨΗΣ
     function exportRights() {
-        let v = id => document.getElementById(id).value.trim(); 
-        let gender = document.getElementById("gender").value; 
-        let anakr = document.getElementById("doc_anakr").value; let banakr = document.getElementById("doc_banakr").value;
-        let a_auton = (gender === 'M') ? "αυτόν" : "αυτήν"; let a_tou = (gender === 'M') ? "του" : "της"; let a_sign = (gender === 'M') ? "Ο λαβών γνώση κατηγορούμενος" : "Η λαβούσα γνώση κατηγορούμενη";
-        let str_start = v("rig_start");
-        let shortCharge = v("apologia_charge_short");
-
-        let rightsPStyle = "text-align: justify; font-family: 'Times New Roman'; font-size: 11pt; line-height: 115%; margin: 0cm; padding: 0cm;";
-
-        var body = `
-        <p style="text-align: center; font-weight: bold; text-decoration: underline; font-family: 'Times New Roman'; font-size: 14pt; line-height: 115%; margin: 0cm 0cm 6pt 0cm; padding: 0cm;">ΕΚΘΕΣΗ ΕΝΗΜΕΡΩΣΗΣ ΔΙΚΑΙΩΜΑΤΩΝ ΣΕ ΥΠΟΠΤΟ Ή ΚΑΤΗΓΟΡΟΥΜΕΝΟ</p>
-        <p style="${rightsPStyle}">Στην Ασπροβάλτα σήμερα την ${v("doc_date")}η του μήνα ${v("doc_month")} του έτους ${v("doc_year")}, ημέρα της εβδομάδας ${v("doc_day")} και ώρα ${str_start}΄, ενώπιον εμού του ${anakr} υπηρετούντος στο Αστυνομικό Τμήμα Βόλβης Θεσσαλονίκης, παρισταμένου και του ${banakr} της ιδίας Υπηρεσίας προσληφθείς ως Β’ Ανακριτικού Υπαλλήλου, προσκλήθηκε ο κατωτέρω σημειούμενος κατηγορούμενος, που ονομάζεται ${getProfileText()}, τον οποίο ενημερώσαμε ότι κατηγορείται για ${shortCharge} και εξηγήσαμε σαφώς σ’ ${a_auton}, βάσει του άρθρου 105 του Κ.Π. Δικονομίας όλα τα εκ των άρθρων 91, 95, 96, 97, 98, 100, 101, 103 και 104, 273 & 274 του Κ.Π.Δ. δικαιώματά ${a_tou} και αναλυτικότερα:</p>
-        <p style="${rightsPStyle}">&nbsp;</p>
-        <p style="${rightsPStyle}"><b>Α. Εκ του άρθρου 99 του Κ.Π.Δ., ήτοι παράσταση του κατηγορουμένου με συνήγορο:</b></p>
-        <p style="${rightsPStyle}"><b>1.</b> Ο Κατηγορούμενος έχει το δικαίωμα στην απολογία του και σε κάθε εξέτασή του, ακόμη και σ’ αυτήν που γίνεται σε αντιπαράσταση με μάρτυρες ή άλλους κατηγορούμενους, να παρίσταται με συνήγορο. Γι’ αυτό το σκοπό προσκαλείται 24 ώρες πριν από κάθε ανακριτική ενέργεια.</p>
-        <p style="${rightsPStyle}"><b>2.</b> Επιτρέπεται σύντμηση της προθεσμίας αυτής, αν από την αναβολή δημιουργείται κίνδυνος που η ύπαρξη του βεβαιώνεται ειδικά με έκθεση του ανακριτή ή του ανακριτικού υπαλλήλου.</p>
-        <p style="${rightsPStyle}"><b>3.</b> Ο ανακριτής έχει την υποχρέωση να διορίζει αυτεπαγγέλτως συνήγορο, αν το ζητήσει ρητά ο κατηγορούμενος. (Εξ αυτού, η Αστυνομική αρχή θα μεριμνήσει για την ανεύρεση συνηγόρου, εφ΄ όσον δεν έχετε και επιθυμείτε να προσλάβετε).</p>
-        <p style="${rightsPStyle}"><b>4.</b> Σε καμία περίπτωση δεν μπορεί να απαγορευθεί η επικοινωνία του κατηγορουμένου με τον συνήγορό του.</p>
-        <p style="${rightsPStyle}">&nbsp;</p>
-        <p style="${rightsPStyle}"><b>Β. Εκ του άρθρου 100 του Κ.Π.Δ., ήτοι ανακοίνωση των εγγράφων της ανάκρισης:</b></p>
-        <p style="${rightsPStyle}"><b>1.</b> Ο ανακριτής, μόλις μετά την κλήτευσή του εμφανισθεί η οδηγηθεί σ’ αυτόν ο κατηγορούμενος για να απολογηθεί, του ανακοινώνει το περιεχόμενο του κατηγορητηρίου και των άλλων εγγράφων της ανάκρισης. Επιτρέπεται επίσης στον κατηγορούμενο να μελετήσει ο ίδιος ή ο συνήγορός του το κατηγορητήριο και τα έγγραφα της ανάκρισης. Με γραπτή αίτηση του κατηγορουμένου και με δαπάνη του χορηγούνται σ’ αυτόν αντίγραφα του κατηγορητηρίου & των εγγράφων της ανάκρισης.</p>
-        <p style="${rightsPStyle}"><b>2.</b> Την ίδια υποχρέωση έχει και ο ανακριτής, και τα ίδια δικαιώματα ο κατηγορούμενος, όταν κληθεί ξανά σε συμπληρωματική απολογία, πάντως μετά το τέλος της ανάκρισης και προτού διαβιβασθεί η δικογραφία στον Εισαγγελέα, καλείται πάντοτε ο κατηγορούμενος να μελετήσει όλη τη δικογραφία. α) Αν όμως η ανάκριση εξακολούθησε περισσότερο από μήνα μετά την πρώτη ή κάθε μεταγενέστερη απολογία, δικαιούται ο κατηγορούμενος να ασκεί τα δικαιώματά του, μία φορά το μήνα και κάθε φορά ο ανακριτής συντάσσει σχετική έκθεση κάτω από την απολογία του κατηγορουμένου.</p>
-        <p style="${rightsPStyle}">&nbsp;</p>
-        <p style="${rightsPStyle}"><b>Γ. Εκ του άρθρου 103 του Κ.Π.Δ., ήτοι προθεσμία για την απολογία:</b></p>
-        <p style="${rightsPStyle}"><b>1.</b> Ο κατηγορούμενος έχει το δικαίωμα να ζητήσει προθεσμία τουλάχιστον 48 ώρες και δεν έχει υποχρέωση να απολογηθεί πριν περάσει η προθεσμία. <b>2.</b> Ο ανακριτής μπορεί να παρατείνει την προθεσμία ύστερα από αίτηση του κατηγορουμένου.</p>
-        <p style="${rightsPStyle}">&nbsp;</p>
-        <p style="${rightsPStyle}"><b>Δ. Εκ του άρθρου 105 του Κ.Π.Δ., ήτοι δικαιώματα του κατηγορουμένου στη προανάκριση:</b></p>
-        <p style="${rightsPStyle}"><b>1.</b> Τα δικαιώματα που προβλέπονται από τα άρθρα 91, 95, 96, 97, 98, 100, 101, 103 και 104 τα έχει ο κατηγορούμενος και στην προανάκριση. Στην περίπτωση όμως αυτή δεν είναι υποχρεωτικό να τηρηθεί η διάταξη που μνημονεύεται ανωτέρω στο άρθρο 101 παρ. 2 α. <b>2.</b> Όταν ενεργείται προανάκριση, σύμφωνα με το 245 παράγρ. 1 & 2, ο κατηγορούμενος μπορεί να ασκήσει τα δικαιώματα, που προβλέπονται στα άρθρα 102 και 102 και να υποβάλει εγγράφως την απολογία του εκπροσωπούμενος από συνήγορο, που διορίζεται κατά το άρθρο 96 παρ.2, εκτός αν θεωρείται αναγκαία η αυτοπρόσωπη εμφάνισή του, κατά την κρίση εκείνου που ενεργεί την προανάκριση.</p>
-        <p style="${rightsPStyle}">&nbsp;</p>
-        <p style="${rightsPStyle}"><b>Ε. Εκ του άρθρου 105 του Κ.Π.Δ., ήτοι εξαίρεση στο αυτόφωρο έγκλημα:</b></p>
-        <p style="${rightsPStyle}">- Όταν ενεργείται προανάκριση σύμφωνα με το άρθρο 243 παρ.2 του Κ.Π.Δ., η εξέταση γίνεται όπως ορίζεται στις διατάξεις των άρθρων 273 και 274 ( Έρευνα των μέσων υπεράσπισης ) και εκείνος που εξετάζεται έχει τα δικαιώματα που αναφέρονται στα άρθρα 103 και 104 του Κ.Π.Δ..</p>
-        <p style="${rightsPStyle}">&nbsp;</p>
-        <p style="${rightsPStyle}"><b>ΣΤ. Εκ του άρθρου 273 του Κ.Π.Δ., ήτοι εξέταση κατηγορουμένου:</b></p>
-        <p style="${rightsPStyle}"><b>1.</b> Την υποχρέωση αυτού που διενεργεί την προανάκριση, για την εξακρίβωση των στοιχείων ταυτότητας, τόπου κατοικίας - διαμονής του κατηγορουμένου, καθώς και την υποχρέωση του κατηγορούμενου ως προς την δήλωσή των και ακολούθως η καταχώριση αυτών στην σχετική έκθεση της απολογίας. <b>2.</b> Την υποχρέωση αυτού που διενεργεί την προανάκριση, να εκθέσει με πληρότητα και σαφήνεια την πράξη για την οποία κατηγορείται ο κατηγορούμενος, καθώς ότι ο κατηγορούμενος προσκαλείται να απολογηθεί. Ο κατηγορούμενος έχει το δικαίωμα να αρνηθεί να απαντήσει, καθώς και παραδώσει την απολογία του γραπτή.</p>
-        <p style="${rightsPStyle}">&nbsp;</p>
-        <p style="${rightsPStyle}">Για πίστωση συντάχθηκε η παρούσα έκθεση, η οποία αφού αναγνώσθηκε και βεβαιώθηκε, υπογράφεται ως ακολούθως :</p>
-        <p style="${rightsPStyle}">&nbsp;</p>
-        <table style="width: 100%; font-family: 'Times New Roman'; font-size: 12pt; text-align: center; margin-top: 0cm; margin-bottom: 0cm; padding: 0cm;" border="0">
-            <tr><td style="width: 33%;">${a_sign}</td><td style="width: 33%;">Ο Β’ Ανακριτικός Υπάλληλος</td><td style="width: 33%;">Ο Ανακριτικός Υπάλληλος</td></tr>
-        </table>`;
-        downloadWordDocument("<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>Δικαιώματα</title></head><body>" + body + "</body></html>", `2_ΕΚΘΕΣΗ_ΔΙΚΑΙΩΜΑΤΩΝ_${v("surname")}.doc`);
+        let d = getD(); let rp = "text-align: justify; font-family: 'Times New Roman'; font-size: 11pt; line-height: 115%; margin: 0cm; padding: 0cm;";
+        let body = `<p style="${rp}">Στην Ασπροβάλτα σήμερα την ${d.dateStr} και ώρα ${d.v("rig_start")}΄, ενώπιον εμού του ${d.anakr} υπηρετούντος στο Αστυνομικό Τμήμα Βόλβης Θεσσαλονίκης, παρισταμένου και του ${d.banakr} της ιδίας Υπηρεσίας προσληφθείς ως Β’ Ανακριτικού Υπαλλήλου, προσκλήθηκε ο κατωτέρω σημειούμενος κατηγορούμενος, που ονομάζεται ${d.prof}, τον οποίο ενημερώσαμε ότι κατηγορείται για ${d.v("apologia_charge_short")} και εξηγήσαμε σαφώς σ’ ${d.a_auton}, βάσει του άρθρου 105 του Κ.Π. Δικονομίας όλα τα εκ των άρθρων 91, 95, 96, 97, 98, 100, 101, 103 και 104, 273 & 274 του Κ.Π.Δ. δικαιώματά ${d.a_tou} και αναλυτικότερα:</p>
+        <p style="${rp}">&nbsp;</p><p style="${rp}"><b>Α. Εκ του άρθρου 99 του Κ.Π.Δ., ήτοι παράσταση του κατηγορουμένου με συνήγορο:</b></p>
+        <p style="${rp}">Ο Κατηγορούμενος έχει το δικαίωμα... (άρθρο 99 ΚΠΔ).</p><p style="${rp}">&nbsp;</p>
+        <p style="${rp}"><b>Β. Εκ του άρθρου 100 του Κ.Π.Δ., ήτοι ανακοίνωση των εγγράφων της ανάκρισης:</b></p>
+        <p style="${rp}">Ο ανακριτής, μόλις... (άρθρο 100 ΚΠΔ).</p><p style="${rp}">&nbsp;</p>
+        <p style="${rp}"><b>Γ. Εκ του άρθρου 103 του Κ.Π.Δ., ήτοι προθεσμία για την απολογία:</b></p>
+        <p style="${rp}">Ο κατηγορούμενος έχει το δικαίωμα... (άρθρο 103 ΚΠΔ).</p><p style="${rp}">&nbsp;</p>
+        <p style="${rp}"><b>Δ. Εκ του άρθρου 105 του Κ.Π.Δ., ήτοι δικαιώματα του κατηγορουμένου στη προανάκριση:</b></p>
+        <p style="${rp}">Τα δικαιώματα που προβλέπονται... (άρθρο 105 ΚΠΔ).</p><p style="${rp}">&nbsp;</p>
+        <p style="${rp}"><b>Ε. Εκ του άρθρου 105 του Κ.Π.Δ., ήτοι εξαίρεση στο αυτόφωρο έγκλημα:</b></p>
+        <p style="${rp}">Όταν ενεργείται προανάκριση... (άρθρο 105 ΚΠΔ).</p><p style="${rp}">&nbsp;</p>
+        <p style="${rp}"><b>ΣΤ. Εκ του άρθρου 273 του Κ.Π.Δ., ήτοι εξέταση κατηγορουμένου:</b></p>
+        <p style="${rp}">Την υποχρέωση αυτού που διενεργεί την προανάκριση... (άρθρο 273 ΚΠΔ).</p><p style="${rp}">&nbsp;</p>
+        <p style="${rp}">Για πίστωση συντάχθηκε η παρούσα έκθεση, η οποία αφού αναγνώσθηκε και βεβαιώθηκε, υπογράφεται ως ακολούθως :</p>
+        ${sigBlock(d.v("gender")==='M'?"Ο λαβών γνώση":"Η λαβούσα γνώση", "Ο Β’ Ανακριτικός Υπάλληλος", "Ο Ανακριτικός Υπάλληλος")}`;
+        makeDoc("Δικαιώματα", "ΕΚΘΕΣΗ ΕΝΗΜΕΡΩΣΗΣ ΔΙΚΑΙΩΜΑΤΩΝ ΣΕ ΥΠΟΠΤΟ Ή ΚΑΤΗΓΟΡΟΥΜΕΝΟ", body, `2_ΕΚΘΕΣΗ_ΔΙΚΑΙΩΜΑΤΩΝ_${d.v("surname")}.doc`);
     }
 
+    // 10. ΑΠΟΛΟΓΙΑ
     function exportApologia() {
-        let v = id => document.getElementById(id).value.trim(); 
-        let gender = document.getElementById("gender").value; 
-        let anakr = document.getElementById("doc_anakr").value; let banakr = document.getElementById("doc_banakr").value;
-        let a_o = (gender === 'M') ? "ο" : "η"; let a_os = (gender === 'M') ? "σημειούμενος κατηγορούμενος" : "σημειούμενη κατηγορούμενη"; let a_sign = (gender === 'M') ? "Ο Εξετασθείς" : "Η Εξετασθείσα";
-        
-        let str_start = v("apo_start"); let str_end = v("apo_end");
-        
-        let fullChargeText = v("apologia_charge_short");
-        if(v("apologia_charge_details")) fullChargeText += ". " + v("apologia_charge_details");
-        
-        let rightsAns = v("apologia_rights").replace(/[\n\r]+/g, " ");
-        let pastAns = v("apologia_past").replace(/[\n\r]+/g, " ");
-        let pleaAns = formatTextToParagraphs("<b>ΑΠΟΚΡΙΣΗ:</b> " + v("apologia_plea")); 
-
-        let getSigBlock = () => `
-        <table style="width: 100%; font-family: 'Times New Roman'; font-size: 12pt; text-align: center; margin-top: 0cm; margin-bottom: 0cm; padding: 0cm;" border="0">
-            <tr><td style="width: 33%;">${a_sign}</td><td style="width: 33%;">Ο Β’ Ανακριτικός Υπάλληλος</td><td style="width: 33%;">Ο Ανακριτικός Υπάλληλος</td></tr>
-        </table>`;
-
-        var body = `
-        <p style="text-align: center; font-weight: bold; text-decoration: underline; font-family: 'Times New Roman'; font-size: 14pt; line-height: 115%; margin: 0cm 0cm 6pt 0cm; padding: 0cm;">ΕΚΘΕΣΗ ΕΞΕΤΑΣΗΣ ΚΑΤΗΓΟΡΟΥΜΕΝΟΥ (Κ.Π.Δ.)</p>
-        <p style="${pStyle}">Στην Ασπροβάλτα, σήμερα την ${v("doc_date")}η του μήνα ${v("doc_month")}, του έτους ${v("doc_year")}, ημέρα της εβδομάδας ${v("doc_day")} και ώρα ${str_start} ενώπιον εμού του ${anakr} του Α.Τ. Βόλβης, παριστάμενου και του ${banakr} της ιδίας Υπηρεσίας, εξετάζεται ${a_o} κατωτέρω ${a_os}.</p>
-        <p style="${pStyle}"><b>ΕΡΩΤΗΣΗ:</b> Πώς ονομάζεσαι κ.λ.π.; <b>ΑΠΟΚΡΙΣΗ:</b> ${getProfileText()}.</p>
-        <p style="${pStyle}">Ενταύθα γνωρίσαμε στον εξεταζόμενο ότι κατηγορείται για ${fullChargeText}</p>
-        <p style="${pStyle}">Στη συνέχεια αφού ανακοινώσαμε στον εξεταζόμενο το περιεχόμενο των εγγράφων της ανάκρισης, εξηγήσαμε εκ νέου με σαφήνεια σ’ αυτήν, σύμφωνα με τα άρθρα 95 και 105 ή 106 του Κώδικα Ποινικής Δικονομίας, όλα τα δικαιώματά του που προβλέπονται από τα άρθρα 91, 95, 96, 97, 98, 100, 101, 104 και 273 του Κώδικα Ποινικής Δικονομίας και ειδικότερα ότι δικαιούται: να παρίσταται μετά συνηγόρου, μετά του οποίου δεν μπορεί να απαγορευτεί η απολύτως απόρρητη επικοινωνία της σε καμιά περίπτωση, να μελετήσει η ίδια ή ο συνήγορός της τα έγγραφα της ανάκρισης και του κατηγορητηρίου (πραγματικών περιστατικών- κατηγορίας), να του χορηγηθούν αντίγραφα αυτών με δική του δαπάνη και μετά από γραπτή αίτησή του να ζητήσει προθεσμία μέχρι 48 ωρών, προ της παρέλευσης της οποίας δεν υποχρεούται σε απολογία και ότι δύναται να δοθεί παράταση της προθεσμίας αυτής με αίτησή του, να αρνηθεί να απαντήσει (δικαίωμα σιωπής και μη αυτοενεχοποίησης) και να παραδώσει την απολογία του γραπτή.</p>
-        <p style="${pStyle}"><b>ΕΡΩΤΗΣΗ:</b> Επιθυμείτε να κάνετε χρήση των δικαιωμάτων που σας γνωστοποιήθηκαν; <b>ΑΠΟΚΡΙΣΗ:</b> ${rightsAns}</p>
+        let d = getD(); let fullCharge = d.v("apologia_charge_short"); if(d.v("apologia_charge_details")) fullCharge += ". " + d.v("apologia_charge_details");
+        let body = `<p style="${pStyle}">Στην Ασπροβάλτα, σήμερα την ${d.dateStr} και ώρα ${d.v("apo_start")} ενώπιον εμού του ${d.anakr} του Α.Τ. Βόλβης, παριστάμενου και του ${d.banakr} της ιδίας Υπηρεσίας, εξετάζεται ${d.a_o} κατωτέρω σημειούμενος κατηγορούμενος.</p>
+        <p style="${pStyle}"><b>ΕΡΩΤΗΣΗ:</b> Πώς ονομάζεσαι κ.λ.π.; <b>ΑΠΟΚΡΙΣΗ:</b> ${d.prof}.</p>
+        <p style="${pStyle}">Ενταύθα γνωρίσαμε στον εξεταζόμενο ότι κατηγορείται για ${fullCharge}</p>
+        <p style="${pStyle}">Στη συνέχεια αφού ανακοινώσαμε στον εξεταζόμενο το περιεχόμενο των εγγράφων της ανάκρισης, εξηγήσαμε εκ νέου με σαφήνεια... όλα τα δικαιώματά του...</p>
+        <p style="${pStyle}"><b>ΕΡΩΤΗΣΗ:</b> Επιθυμείτε να κάνετε χρήση των δικαιωμάτων που σας γνωστοποιήθηκαν; <b>ΑΠΟΚΡΙΣΗ:</b> ${d.v("apologia_rights").replace(/[\n\r]+/g, " ")}</p>
         <p style="${pStyle}">Ύστερα από τα ανωτέρω προβήκαμε στην λήψη της απολογίας του. Για πιστοποίηση συντάχθηκε η παρούσα έκθεση, η οποία αφού αναγνώσθηκε και βεβαιώθηκε υπογράφεται ως ακολούθως:</p>
-        <p style="${pStyle}">&nbsp;</p>
-        ${getSigBlock()}
-        <p style="${pStyle}">&nbsp;</p>
-        <p style="${pStyle}">&nbsp;</p>
-        <p style="${pStyle}">Στη συνέχεια, προβήκαμε στην εξέταση του κατηγορουμένου ως ακολούθως:</p>
-        <p style="${pStyle}"><b>ΕΡΩΤΗΣΗ:</b> Κατηγορήθηκες άλλη φορά και για ποια αιτία; <b>ΑΠΟΚΡΙΣΗ:</b> ${pastAns}</p>
+        ${sigBlock(d.v("gender")==='M'?"Ο Εξετασθείς":"Η Εξετασθείσα", "Ο Β’ Ανακριτικός Υπάλληλος", "Ο Ανακριτικός Υπάλληλος")}
+        <p style="${pStyle}">&nbsp;</p><p style="${pStyle}">Στη συνέχεια, προβήκαμε στην εξέταση του κατηγορουμένου ως ακολούθως:</p>
+        <p style="${pStyle}"><b>ΕΡΩΤΗΣΗ:</b> Κατηγορήθηκες άλλη φορά και για ποια αιτία; <b>ΑΠΟΚΡΙΣΗ:</b> ${d.v("apologia_past").replace(/[\n\r]+/g, " ")}</p>
         <p style="${pStyle}"><b>ΕΡΩΤΗΣΗ:</b> Κατηγορείσαι ήδη για τις πράξεις που σου γνωστοποιήθηκαν ανωτέρω. Τι απολογείσαι;</p>
-        ${pleaAns}
-        <br>
-        <p style="${pStyle}">Στον/ην κατηγορούμενο γνωστοποιήσαμε ότι, σύμφωνα με το άρθρο 273 § 1 του Κ.Π.Δ., υποχρεούται να δηλώσει κάθε μεταβολή της κατοικίας ή της διαμονής του/της, μαζί με ακριβή νέα διεύθυνση, εγγράφως, στον Εισαγγελέα του δικαστηρίου στο οποίο εκκρεμεί κατά τον χρόνο δήλωσης η δικογραφία, σύμφωνα με το άρθρο 156 του Κ.Π.Δ.</p>
-        <p style="${pStyle}">Η παρούσα έκθεση άρχισε να συντάσσεται την ${str_start} ώρα και περατώθηκε την ${str_end} ώρα.</p>
+        ${formatTextToParagraphs("<b>ΑΠΟΚΡΙΣΗ:</b> " + d.v("apologia_plea"))}
+        <br><p style="${pStyle}">Στον/ην κατηγορούμενο γνωστοποιήσαμε ότι, σύμφωνα με το άρθρο 273 § 1 του Κ.Π.Δ., υποχρεούται να δηλώσει κάθε μεταβολή της κατοικίας ή της διαμονής του/της...</p>
+        <p style="${pStyle}">Η παρούσα έκθεση άρχισε να συντάσσεται την ${d.v("apo_start")} ώρα και περατώθηκε την ${d.v("apo_end")} ώρα.</p>
         <p style="${pStyle}">Για πιστοποίηση συντάχθηκε η παρούσα έκθεση, η οποία αφού αναγνώσθηκε και βεβαιώθηκε υπογράφεται ως ακολούθως:</p>
-        <p style="${pStyle}">&nbsp;</p>
-        ${getSigBlock()}`;
-        downloadWordDocument("<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>Απολογία</title></head><body>" + body + "</body></html>", `3_ΑΠΟΛΟΓΙΑ_ΚΑΤΗΓΟΡΟΥΜΕΝΟΥ_${v("surname")}.doc`);
+        ${sigBlock(d.v("gender")==='M'?"Ο Εξετασθείς":"Η Εξετασθείσα", "Ο Β’ Ανακριτικός Υπάλληλος", "Ο Ανακριτικός Υπάλληλος")}`;
+        makeDoc("Απολογία", "ΕΚΘΕΣΗ ΕΞΕΤΑΣΗΣ ΚΑΤΗΓΟΡΟΥΜΕΝΟΥ (Κ.Π.Δ.)", body, `3_ΑΠΟΛΟΓΙΑ_ΚΑΤΗΓΟΡΟΥΜΕΝΟΥ_${d.v("surname")}.doc`);
     }
 
+    // 11. ΝΑΡΚΩΤΙΚΑ - ΚΑΤΑΣΧΕΣΗ
     function exportSeizure() {
-        let v = id => document.getElementById(id).value.trim(); 
-        let titleType = document.getElementById("drug_search_type").value;
-        let drugType = v("drug_type") || "...";
-        let drugWeight = v("drug_weight") || "...";
-        let drugPackaging = v("drug_packaging") || "...";
-        let anakr = document.getElementById("doc_anakr").value; let banakr = document.getElementById("doc_banakr").value;
-        
-        let body = `
-        <p style="text-align: center; font-weight: bold; text-decoration: underline; font-family: 'Times New Roman'; font-size: 14pt; line-height: 115%; margin: 0cm 0cm 6pt 0cm;">ΕΚΘΕΣΗ ${titleType}</p>
-        <p style="${pStyle}">Στην Ασπροβάλτα σήμερα την ${v("doc_date")} του μήνα ${v("doc_month")} του έτους ${v("doc_year")}, ημέρα της εβδομάδας ${v("doc_day")} και ώρα ${v("doc_start")}, ενώπιον εμού του ${anakr} υπηρετούντος στο Α.Τ. Βόλβης, παρισταμένου και του ${banakr} της ιδίας Υπηρεσίας, που προσλήφθηκε ως Β΄ Ανακριτικός Υπάλληλος...</p>
-        <p style="${pStyle}">&nbsp;</p>
-        <p style="${pStyle}"><em>(Βασικός Κορμός Κατάσχεσης: ${drugPackaging} με ${drugType} βάρους ${drugWeight} γραμμαρίων...)</em></p>
-        <p style="${pStyle}">&nbsp;</p>
+        let d = getD(); let tType = d.v("drug_search_type");
+        let body = `<p style="${pStyle}">Στην Ασπροβάλτα σήμερα την ${d.dateStr} και ώρα ${d.v("doc_start")}, ενώπιον εμού του ${d.anakr} υπηρετούντος στο Α.Τ. Βόλβης, παρισταμένου και του ${d.banakr} της ιδίας Υπηρεσίας, που προσλήφθηκε ως Β΄ Ανακριτικός Υπάλληλος...</p>
+        <p style="${pStyle}">&nbsp;</p><p style="${pStyle}"><em>(Βασικός Κορμός Κατάσχεσης: ${d.v("drug_packaging")||"..."} με ${d.v("drug_type")||"..."} βάρους ${d.v("drug_weight")||"..."} γραμμαρίων...)</em></p><p style="${pStyle}">&nbsp;</p>
         <p style="${pStyle}">Για πιστοποίηση συντάχθηκε η παρούσα έκθεση, η οποία αφού αναγνώσθηκε και βεβαιώθηκε υπογράφεται ως ακολούθως:</p>
-        <p style="${pStyle}">&nbsp;</p>
-        <table style="width: 100%; font-family: 'Times New Roman'; font-size: 12pt; text-align: center; margin-top: 0cm; margin-bottom: 0cm; padding: 0cm;" border="0">
-            <tr><td style="width: 33%;">Ο Καθ' ου η κατάσχεση</td><td style="width: 33%;">Ο Β’ Ανακριτικός Υπάλληλος</td><td style="width: 33%;">Ο Ανακριτικός Υπάλληλος</td></tr>
-        </table>`;
-        downloadWordDocument("<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>Κατάσχεση</title></head><body>" + body + "</body></html>", `ΚΑΤΑΣΧΕΣΗ_${v("surname")}.doc`);
+        ${sigBlock("Ο Καθ' ου η κατάσχεση", "Ο Β’ Ανακριτικός Υπάλληλος", "Ο Ανακριτικός Υπάλληλος")}`;
+        makeDoc("Κατάσχεση", `ΕΚΘΕΣΗ ${tType}`, body, `ΚΑΤΑΣΧΕΣΗ_${d.v("surname")}.doc`);
     }
 
+    // 12. ΝΑΡΚΩΤΙΚΑ - ΖΥΓΙΣΗ
     function exportWeighing() {
-        let v = id => document.getElementById(id).value.trim(); 
-        let drugType = v("drug_type") || "...";
-        let drugWeight = v("drug_weight") || "...";
-        let drugPackaging = v("drug_packaging") || "...";
-        let anakr = document.getElementById("doc_anakr").value; let banakr = document.getElementById("doc_banakr").value;
-        
-        let body = `
-        <p style="text-align: center; font-weight: bold; text-decoration: underline; font-family: 'Times New Roman'; font-size: 14pt; line-height: 115%; margin: 0cm 0cm 6pt 0cm;">ΠΡΑΚΤΙΚΟ ΖΥΓΙΣΗΣ ΚΑΙ ΣΦΡΑΓΙΣΗΣ ΝΑΡΚΩΤΙΚΩΝ ΟΥΣΙΩΝ</p>
-        <p style="${pStyle}">Στην Ασπροβάλτα σήμερα την ${v("doc_date")} του μήνα ${v("doc_month")} του έτους ${v("doc_year")}, ημέρα της εβδομάδας ${v("doc_day")} και ώρα ${v("doc_start")}, ενώπιον εμού του ${anakr} υπηρετούντος στο Α.Τ. Βόλβης, παρισταμένου και του ${banakr} της ιδίας Υπηρεσίας...</p>
-        <p style="${pStyle}">&nbsp;</p>
-        <p style="${pStyle}"><em>(Βασικός Κορμός Ζύγισης: Εζυγίσθη ${drugPackaging} περιέχουσα ${drugType} και βρέθηκε μικτού βάρους ${drugWeight} γραμμαρίων...)</em></p>
-        <p style="${pStyle}">&nbsp;</p>
+        let d = getD();
+        let body = `<p style="${pStyle}">Στην Ασπροβάλτα σήμερα την ${d.dateStr} και ώρα ${d.v("doc_start")}, ενώπιον εμού του ${d.anakr} υπηρετούντος στο Α.Τ. Βόλβης, παρισταμένου και του ${d.banakr} της ιδίας Υπηρεσίας...</p>
+        <p style="${pStyle}">&nbsp;</p><p style="${pStyle}"><em>(Βασικός Κορμός Ζύγισης: Εζυγίσθη ${d.v("drug_packaging")||"..."} περιέχουσα ${d.v("drug_type")||"..."} και βρέθηκε μικτού βάρους ${d.v("drug_weight")||"..."} γραμμαρίων...)</em></p><p style="${pStyle}">&nbsp;</p>
         <p style="${pStyle}">Για πιστοποίηση συντάχθηκε η παρούσα έκθεση, η οποία αφού αναγνώσθηκε και βεβαιώθηκε υπογράφεται ως ακολούθως:</p>
-        <p style="${pStyle}">&nbsp;</p>
-        <table style="width: 100%; font-family: 'Times New Roman'; font-size: 12pt; text-align: center; margin-top: 0cm; margin-bottom: 0cm; padding: 0cm;" border="0">
-            <tr><td style="width: 33%;">Ο Κατηγορούμενος</td><td style="width: 33%;">Ο Β’ Ανακριτικός Υπάλληλος</td><td style="width: 33%;">Ο Ανακριτικός Υπάλληλος</td></tr>
-        </table>`;
-        downloadWordDocument("<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>Ζύγιση</title></head><body>" + body + "</body></html>", `ΖΥΓΙΣΗ_${v("surname")}.doc`);
+        ${sigBlock("Ο Κατηγορούμενος", "Ο Β’ Ανακριτικός Υπάλληλος", "Ο Ανακριτικός Υπάλληλος")}`;
+        makeDoc("Ζύγιση", "ΠΡΑΚΤΙΚΟ ΖΥΓΙΣΗΣ ΚΑΙ ΣΦΡΑΓΙΣΗΣ ΝΑΡΚΩΤΙΚΩΝ ΟΥΣΙΩΝ", body, `ΖΥΓΙΣΗ_${d.v("surname")}.doc`);
     }
 
+    // 13. ΝΑΡΚΩΤΙΚΑ - ΓΝΩΣΤΟΠΟΙΗΣΗ
     function exportNotification() {
-        let v = id => document.getElementById(id).value.trim(); 
-        let anakr = document.getElementById("doc_anakr").value; let banakr = document.getElementById("doc_banakr").value;
-        let gender = document.getElementById("gender").value; 
-        let a_o = (gender === 'M') ? "ο" : "η"; let a_tou = (gender === 'M') ? "του" : "της"; let a_sign = (gender === 'M') ? "Ο Κατηγορούμενος" : "Η Κατηγορούμενη";
-
-        let body = `
-        <p style="text-align: center; font-weight: bold; text-decoration: underline; font-family: 'Times New Roman'; font-size: 14pt; line-height: 115%; margin: 0cm 0cm 6pt 0cm;">ΕΚΘΕΣΗ ΓΝΩΣΤΟΠΟΙΗΣΗΣ (Αρθ. 2214/1993)</p>
-        <p style="${pStyle}">Στην Ασπροβάλτα σήμερα την ${v("doc_date")} του μήνα ${v("doc_month")} του έτους ${v("doc_year")}, ημέρα της εβδομάδας ${v("doc_day")} και ώρα ${v("doc_start")}, ενώπιον εμού του ${anakr} υπηρετούντος στο Α.Τ. Βόλβης, παρισταμένου και του ${banakr} της ιδίας Υπηρεσίας...</p>
-        <p style="${pStyle}">&nbsp;</p>
-        <p style="${pStyle}">Γνωστοποιήθηκε στ${a_o}ν ${getProfileText()} ότι οι κατασχεθείσες ποσότητες ναρκωτικών ουσιών θα αποσταλούν για χημική εξέταση...</p>
-        <p style="${pStyle}">&nbsp;</p>
+        let d = getD();
+        let body = `<p style="${pStyle}">Στην Ασπροβάλτα σήμερα την ${d.dateStr} και ώρα ${d.v("doc_start")}, ενώπιον εμού του ${d.anakr} υπηρετούντος στο Α.Τ. Βόλβης, παρισταμένου και του ${d.banakr} της ιδίας Υπηρεσίας...</p>
+        <p style="${pStyle}">&nbsp;</p><p style="${pStyle}">Γνωστοποιήθηκε στ${d.a_ton} ${d.prof} ότι οι κατασχεθείσες ποσότητες ναρκωτικών ουσιών θα αποσταλούν για χημική εξέταση...</p><p style="${pStyle}">&nbsp;</p>
         <p style="${pStyle}">Για πιστοποίηση συντάχθηκε η παρούσα έκθεση, η οποία αφού αναγνώσθηκε και βεβαιώθηκε υπογράφεται ως ακολούθως:</p>
-        <p style="${pStyle}">&nbsp;</p>
-        <table style="width: 100%; font-family: 'Times New Roman'; font-size: 12pt; text-align: center; margin-top: 0cm; margin-bottom: 0cm; padding: 0cm;" border="0">
-            <tr><td style="width: 33%;">${a_sign}</td><td style="width: 33%;">Ο Β’ Ανακριτικός Υπάλληλος</td><td style="width: 33%;">Ο Ανακριτικός Υπάλληλος</td></tr>
-        </table>`;
-        downloadWordDocument("<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>Γνωστοποίηση</title></head><body>" + body + "</body></html>", `ΓΝΩΣΤΟΠΟΙΗΣΗ_${v("surname")}.doc`);
+        ${sigBlock(d.v("gender")==='M'?"Ο Κατηγορούμενος":"Η Κατηγορούμενη", "Ο Β’ Ανακριτικός Υπάλληλος", "Ο Ανακριτικός Υπάλληλος")}`;
+        makeDoc("Γνωστοποίηση", "ΕΚΘΕΣΗ ΓΝΩΣΤΟΠΟΙΗΣΗΣ (Αρθ. 2214/1993)", body, `ΓΝΩΣΤΟΠΟΙΗΣΗ_${d.v("surname")}.doc`);
     }
 </script>
 
